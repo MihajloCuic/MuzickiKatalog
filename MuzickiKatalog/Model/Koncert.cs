@@ -17,5 +17,30 @@ namespace MuzickiKatalog.Model
         public string FormatPrikaza { get; set; }
         public DateTime DatumDesavanja { get; set; }
         public List<ElementSistema> ElementiKoncerta { get; set; }
+        //base konstruktor
+        public Koncert() 
+            :base()
+        {
+            ElementiKoncerta = new List<ElementSistema>();
+        }
+        //parametarski konstruktor
+        public Koncert(string _ime, int _prosecnaOcena, string _opis, int _id, string _snimatelj, string _formatPrikaza, DateTime _datumDesavanja)
+            : base(_ime, _prosecnaOcena, _opis, _id)
+        { 
+            Snimatelj = _snimatelj;
+            FormatPrikaza = _formatPrikaza;
+            DatumDesavanja = _datumDesavanja;
+            ElementiKoncerta = new List<ElementSistema>();
+        }
+        //parametarski konstruktor sa inicijalizovanim listama
+        public Koncert(string _ime, int _prosecnaOcena, string _opis, int _id, string _snimatelj, string _formatPrikaza, DateTime _datumDesavanja,
+            List<Zanr> _sviZanrovi, List<Recenzija> _sveRecenzije, List<ElementSistema> _elementiKoncerta)
+            : base(_ime, _prosecnaOcena, _opis, _id, _sviZanrovi, _sveRecenzije)
+        {
+            Snimatelj = _snimatelj;
+            FormatPrikaza = _formatPrikaza;
+            DatumDesavanja = _datumDesavanja;
+            ElementiKoncerta = _elementiKoncerta;
+        }
     }
 }
