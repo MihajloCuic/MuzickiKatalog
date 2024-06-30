@@ -22,5 +22,30 @@ namespace MuzickiKatalog.Model
         public string Id { get; set; }
         public List<Recenzija> SveRecenzije { get; set; }
 
+        //base konstruktor
+        public Osoba()
+        {
+            SveRecenzije = new List<Recenzija>();
+        }
+        //parametarski konstruktor
+        public Osoba(string _ime, string _prezime, string _email, string _telefon, string _id)
+        {
+            Ime = _ime;
+            Prezime = _prezime;
+            Email = _email;
+            Telefon = _telefon;
+            Id = _id;
+            SveRecenzije = new List<Recenzija>();
+        }
+        //parametarski konstruktor sa inicijalizovanom listom
+        public Osoba(string _ime, string _prezime, string _email, string _telefon, string _id, List<Recenzija> _sveRecenzije)
+        {
+            Ime = _ime;
+            Prezime = _prezime;
+            Email = _email;
+            Telefon = _telefon;
+            Id = _id;
+            SveRecenzije = _sveRecenzije;
+        }
     }
 }
