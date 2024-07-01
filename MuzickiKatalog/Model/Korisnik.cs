@@ -100,7 +100,7 @@ namespace MuzickiKatalog.Model
             UpisiKorisnike(sviKorisnici);
         }
         //Obrisi korisnika
-        public void Obrisi(string id) 
+        public void Obrisi() 
         {
             Dictionary<string, Korisnik> sviKorisnici = UcitajKorisnike();
             if (!sviKorisnici.ContainsKey(Id)) 

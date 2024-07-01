@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace MuzickiKatalog.Model
 {
-    class MuzickiUrednik : Osoba
+    public class MuzickiUrednik : Osoba
     {
         private static readonly string fajl = Path.Combine("..", "..", "..", "Data", "MuzickiUrednici.json");
         private List<Zanr> sviZanrovi;
