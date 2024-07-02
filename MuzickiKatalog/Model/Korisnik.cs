@@ -115,7 +115,12 @@ namespace MuzickiKatalog.Model
         public void OznaciKaoOmiljeno(ElementSistema omiljeniElement)
         {
             Dictionary<string, Korisnik> sviKorisnici = UcitajKorisnike();
-            sviKorisnici[Id].Omiljeno.Add(omiljeniElement);
+            if (Omiljeno.Contains(omiljeniElement))
+            { 
+                throw new Exception("Element je vec u omiljenim");
+            }
+            Omiljeno.Add(omiljeniElement);
+            sviKorisnici[Id] = this;
             UpisiKorisnike(sviKorisnici);
         }
         //ukloni element iz omiljenih
@@ -126,7 +131,8 @@ namespace MuzickiKatalog.Model
             {
                 throw new Exception("Element nije medju omiljenima");
             }
-            sviKorisnici[Id].Omiljeno.Remove(omiljeniElement);
+            Omiljeno.Remove(omiljeniElement);
+            sviKorisnici[Id] = this;
             UpisiKorisnike(sviKorisnici);
         }
         //Dodavanje nove recenzije
@@ -143,11 +149,40 @@ namespace MuzickiKatalog.Model
             UpisiKorisnike(sviKorisnici);
         }
         //Dodaj playlistu
-        public void KreirajPlaylistu(Playlista novaPlaylista)
+        public void KreirajPlaylistu(string ime, string status)
         {
-            Dictionary<string, Korisnik> sviKorisnici = UcitajKorisnike();
-            sviKorisnici[Id].SvePlayliste.Add(novaPlaylista);
-            UpisiKorisnike(sviKorisnici);
+            Playlista novaPlaylista = new Playlista(status, ime, this);
+            novaPlaylista.Dodaj(this);
+        }
+        //Dodavanje numere na playlistu
+        public void DodajNumeruNaPlaylistu(MuzickaNumera numera, int idPlayliste)
+        {
+            foreach (Playlista playlista in SvePlayliste)
+            {
+                if (playlista.Id != idPlayliste)
+                {
+                    continue;
+                }
+                playlista.DodajNumeru(numera);
+                Dictionary<string, Korisnik> sviKorisnici = UcitajKorisnike();
+                sviKorisnici[Id] = this;
+                UpisiKorisnike(sviKorisnici);
+            }
+        }
+        //Uklanjanje numere sa playliste
+        public void UkloniNumeruSaPlayliste(MuzickaNumera numera, int idPlayliste)
+        {
+            foreach (Playlista playlista in SvePlayliste)
+            { 
+                if(playlista.Id != idPlayliste)
+                { 
+                    continue; 
+                }
+                playlista.UkloniNumeru(numera);
+                Dictionary<string, Korisnik> sviKorisnici = UcitajKorisnike();
+                sviKorisnici[Id] = this;
+                UpisiKorisnike(sviKorisnici);
+            }
         }
         //Glasaj
         public void Glasaj() { }

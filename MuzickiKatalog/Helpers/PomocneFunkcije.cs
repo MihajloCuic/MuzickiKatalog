@@ -15,5 +15,12 @@ namespace MuzickiKatalog.Helpers
             int noviId = hashMail ^ idElementaSistema;
             return noviId;
         }
+        public static int NapraviIDPlaylistu(string idOsobe, string imePlayliste)
+        {
+            int hashMail = idOsobe.GetHashCode();
+            int hashImePlayliste = imePlayliste.GetHashCode();
+            
+            return hashMail ^ hashImePlayliste;
+        }
     }
 }
