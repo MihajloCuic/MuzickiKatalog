@@ -120,6 +120,21 @@ namespace MuzickiKatalog.Model
         //brisanje neprikladne korisnicke recenzije
         public void ModerirajKorisnickuRecenziju(Korisnik korisnik) { }
         //Glasaj
-        public void Glasaj() { }
+        public void Glasaj(Glasanje glasanje, ElementSistema izabraniElement) 
+        {
+            if (!glasanje.Kandidati.Contains(izabraniElement))
+            {
+                throw new Exception("Element nije deo takmicenja");
+            }
+            foreach (Glas glas in glasanje.Glasovi)
+            {
+                if(glas.Glasac.Id ==  Id)
+                {
+                    throw new Exception("Korisnik je vec glasao");
+                }
+            }
+            Glas noviGlas = new Glas(this, izabraniElement);
+            noviGlas.Dodaj(glasanje);
+        }
     }
 }
