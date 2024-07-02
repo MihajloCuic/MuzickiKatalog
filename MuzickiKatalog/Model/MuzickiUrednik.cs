@@ -111,8 +111,14 @@ namespace MuzickiKatalog.Model
         //Dodavanje novog elementa
         //public ElementSistema DodavanjeElementaSistema() {}
         //Dodavanje nove recenzije
-        public void OstaviRecenziju(Recenzija novaRecenzija) 
+        public void OstaviRecenziju(string opis, int ocena, ElementSistema recenziraniElement) 
         {
+            Recenzija novaRecenzija = new Recenzija(opis, ocena, this, recenziraniElement);
+            if (SveRecenzije.Contains(novaRecenzija))
+            { 
+                throw new Exception("Vec ste ostavili recenziju na ovaj element");
+            }
+            novaRecenzija.Dodaj();
             Dictionary<string, MuzickiUrednik> sviUrednici = UcitajUrednike();
             sviUrednici[Id].SveRecenzije.Add(novaRecenzija);
             UpisiUrednike(sviUrednici);

@@ -6,6 +6,7 @@ using System.IO.Packaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MuzickiKatalog.Helpers;
 
 namespace MuzickiKatalog.Model
 {
@@ -26,9 +27,9 @@ namespace MuzickiKatalog.Model
         //base konstruktor
         public Recenzija() { }
         //parametarski konstruktor
-        public Recenzija(int _id, string _opis, int _ocena, Osoba _recezent, ElementSistema _recenziraniElement)
+        public Recenzija(string _opis, int _ocena, Osoba _recezent, ElementSistema _recenziraniElement)
         {
-            Id = _id;
+            Id = PomocneFunkcije.NapraviID(_recezent.Id, _recenziraniElement.Id);
             Opis = _opis;
             Ocena = _ocena;
             Recezent = _recezent;
