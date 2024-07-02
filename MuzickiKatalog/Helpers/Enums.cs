@@ -4,15 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MuzickiKatalog.Model
+namespace MuzickiKatalog.Helpers
 {
-    public enum VrstaKorisnika {
+    public enum VrstaKorisnika
+    {
         korisnik,
         muzickiUrednik,
         administrator
     }
 
-    public enum Status { 
+    public enum Status
+    {
         privateList,
         publicList
     }
