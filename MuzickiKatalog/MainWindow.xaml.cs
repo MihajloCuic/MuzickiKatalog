@@ -19,8 +19,8 @@ namespace MuzickiKatalog
     {
         public MainWindow()
         {
-            //MFunctionsES.test1();
-            InitializeComponent();
+            MFunctionsES.test1();
+            //InitializeComponent();
         }
     }
 }

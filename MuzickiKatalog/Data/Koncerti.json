@@ -1,1 +1,184 @@
-{}
+{
+  "4": {
+    "Snimatelj": "Snimatelj 1",
+    "FormatPrikaza": "HD",
+    "DatumDesavanja": "2024-06-02T21:19:32.5746052+02:00",
+    "ElementiKoncerta": [
+      {
+        "Numere": [],
+        "Grupa": {
+          "Izvodjaci": [],
+          "Numere": [],
+          "Ime": "Grupa Test Izmenjena",
+          "ProsecnaOcena": 4,
+          "Opis": "Izmenjeni opis testne muzičke grupe",
+          "Id": 1,
+          "SviZanrovi": [
+            {
+              "Id": 1,
+              "Naziv": "Rock"
+            },
+            {
+              "Id": 2,
+              "Naziv": "Pop"
+            }
+          ],
+          "SveRecenzije": [
+            {
+              "Id": 1,
+              "Opis": "Odlična pesma!",
+              "Ocena": 5
+            },
+            {
+              "Id": 2,
+              "Opis": "Dobra melodija.",
+              "Ocena": 4
+            }
+          ]
+        },
+        "Ime": "Izvodjac 1",
+        "ProsecnaOcena": 5,
+        "Opis": "Poznati izvođač nad izvodjacima",
+        "Id": 2,
+        "SviZanrovi": [
+          {
+            "Id": 1,
+            "Naziv": "Rock"
+          },
+          {
+            "Id": 2,
+            "Naziv": "Pop"
+          }
+        ],
+        "SveRecenzije": [
+          {
+            "Id": 1,
+            "Opis": "Odlična pesma!",
+            "Ocena": 5
+          },
+          {
+            "Id": 2,
+            "Opis": "Dobra melodija.",
+            "Ocena": 4
+          }
+        ]
+      },
+      {
+        "DatumIzbacivanja": "2024-07-02T21:19:28.762825+02:00",
+        "Izvodjaci": [
+          {
+            "Numere": [],
+            "Grupa": {
+              "Izvodjaci": [],
+              "Numere": [],
+              "Ime": "Grupa Test Izmenjena",
+              "ProsecnaOcena": 4,
+              "Opis": "Izmenjeni opis testne muzičke grupe",
+              "Id": 1,
+              "SviZanrovi": [
+                {
+                  "Id": 1,
+                  "Naziv": "Rock"
+                },
+                {
+                  "Id": 2,
+                  "Naziv": "Pop"
+                }
+              ],
+              "SveRecenzije": [
+                {
+                  "Id": 1,
+                  "Opis": "Odlična pesma!",
+                  "Ocena": 5
+                },
+                {
+                  "Id": 2,
+                  "Opis": "Dobra melodija.",
+                  "Ocena": 4
+                }
+              ]
+            },
+            "Ime": "Izvodjac 1",
+            "ProsecnaOcena": 5,
+            "Opis": "Poznati izvođač nad izvodjacima",
+            "Id": 2,
+            "SviZanrovi": [
+              {
+                "Id": 1,
+                "Naziv": "Rock"
+              },
+              {
+                "Id": 2,
+                "Naziv": "Pop"
+              }
+            ],
+            "SveRecenzije": [
+              {
+                "Id": 1,
+                "Opis": "Odlična pesma!",
+                "Ocena": 5
+              },
+              {
+                "Id": 2,
+                "Opis": "Dobra melodija.",
+                "Ocena": 4
+              }
+            ]
+          }
+        ],
+        "Ime": "Pesma 1",
+        "ProsecnaOcena": 5,
+        "Opis": "Prva pesma je konza",
+        "Id": 3,
+        "SviZanrovi": [
+          {
+            "Id": 1,
+            "Naziv": "Rock"
+          },
+          {
+            "Id": 2,
+            "Naziv": "Pop"
+          }
+        ],
+        "SveRecenzije": [
+          {
+            "Id": 1,
+            "Opis": "Odlična pesma!",
+            "Ocena": 5
+          },
+          {
+            "Id": 2,
+            "Opis": "Dobra melodija.",
+            "Ocena": 4
+          }
+        ]
+      }
+    ],
+    "Ime": "Koncert 1",
+    "ProsecnaOcena": 5,
+    "Opis": "Veliki koncert je konza",
+    "Id": 4,
+    "SviZanrovi": [
+      {
+        "Id": 1,
+        "Naziv": "Rock"
+      },
+      {
+        "Id": 2,
+        "Naziv": "Pop"
+      }
+    ],
+    "SveRecenzije": [
+      {
+        "Id": 1,
+        "Opis": "Odlična pesma!",
+        "Ocena": 5
+      },
+      {
+        "Id": 2,
+        "Opis": "Dobra melodija.",
+        "Ocena": 4
+      }
+    ]
+  }
+}

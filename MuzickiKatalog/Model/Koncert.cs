@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using System.IO;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json.Linq;
 
 namespace MuzickiKatalog.Model
 {
@@ -16,17 +17,17 @@ namespace MuzickiKatalog.Model
         private string snimatelj;
         private string formatPrikaza;
         private DateTime datumDesavanja;
-        private List<Izvodjac> elementiKoncerta;
+        private List<ElementSistema> elementiKoncerta;
 
         public string Snimatelj { get; set; }
         public string FormatPrikaza { get; set; }
         public DateTime DatumDesavanja { get; set; }
-        public List<Izvodjac> ElementiKoncerta { get; set; }
+        public List<ElementSistema> ElementiKoncerta { get; set; }
         //base konstruktor
         public Koncert() 
             :base()
         {
-            ElementiKoncerta = new List<Izvodjac>();
+            ElementiKoncerta = new List<ElementSistema>();
         }
         //parametarski konstruktor
         public Koncert(string _ime, int _prosecnaOcena, string _opis, int _id, string _snimatelj, string _formatPrikaza, DateTime _datumDesavanja)
@@ -35,11 +36,11 @@ namespace MuzickiKatalog.Model
             Snimatelj = _snimatelj;
             FormatPrikaza = _formatPrikaza;
             DatumDesavanja = _datumDesavanja;
-            ElementiKoncerta = new List<Izvodjac>();
+            ElementiKoncerta = new List<ElementSistema>();
         }
         //parametarski konstruktor sa inicijalizovanim listama
         public Koncert(string _ime, int _prosecnaOcena, string _opis, int _id, string _snimatelj, string _formatPrikaza, DateTime _datumDesavanja,
-            List<Zanr> _sviZanrovi, List<Recenzija> _sveRecenzije, List<Izvodjac> _elementiKoncerta)
+            List<Zanr> _sviZanrovi, List<Recenzija> _sveRecenzije, List<ElementSistema> _elementiKoncerta)
             : base(_ime, _prosecnaOcena, _opis, _id, _sviZanrovi, _sveRecenzije)
         {
             Snimatelj = _snimatelj;
@@ -47,17 +48,46 @@ namespace MuzickiKatalog.Model
             DatumDesavanja = _datumDesavanja;
             ElementiKoncerta = _elementiKoncerta;
         }
+
         //citanje koncerta iz fajla
+        public class ElementSistemaConverter : JsonConverter
+        {
+            public override bool CanConvert(Type objectType)
+            {
+                return (objectType == typeof(ElementSistema));
+            }
+
+            public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+            {
+                JObject jo = JObject.Load(reader);
+                if (jo["Grupa"] != null)
+                {
+                    return jo.ToObject<Izvodjac>(serializer);
+                }
+                else if (jo["DatumIzbacivanja"] != null)
+                {
+                    return jo.ToObject<MuzickaNumera>(serializer);
+                }
+                throw new Exception("Unknown type of ElementSistema");
+            }
+
+            public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+            {
+                JToken t = JToken.FromObject(value);
+                t.WriteTo(writer);
+            }
+        }
         public static Dictionary<int,Koncert> UcitajKoncerte()
         {
             Dictionary<int, Koncert> sviKoncerti = new Dictionary<int, Koncert>();
-            try 
+            try
             {
-                
-                    string data = File.ReadAllText(file);
-                    sviKoncerti = JsonConvert.DeserializeObject<Dictionary<int, Koncert>>(data);
+                string data = File.ReadAllText(file);
+                JsonSerializerSettings settings = new JsonSerializerSettings();
+                settings.Converters.Add(new ElementSistemaConverter());
+                sviKoncerti = JsonConvert.DeserializeObject<Dictionary<int, Koncert>>(data, settings);
             }
-            catch(IOException e)
+            catch (IOException e)
             {
                 throw new Exception("Greska pri citanju iz fajla");
             }
@@ -98,7 +128,7 @@ namespace MuzickiKatalog.Model
         }
         //izmeni koncert
         public void Izmeni(string _ime, int _prosecnaOcena, string _opis, string _snimatelj, string _formatPrikaza, DateTime _datumDesavanja,
-            List<Zanr> _sviZanrovi, List<Recenzija> _sveRecenzije, List<Izvodjac> _elementiKoncerta)
+            List<Zanr> _sviZanrovi, List<Recenzija> _sveRecenzije, List<ElementSistema> _elementiKoncerta)
         {
             Ime = _ime;
             ProsecnaOcena = _prosecnaOcena;

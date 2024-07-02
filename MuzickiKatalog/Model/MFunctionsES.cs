@@ -67,7 +67,7 @@ namespace MuzickiKatalog.Model
                 _datumDesavanja: DateTime.Now.AddDays(-30),
                 _sviZanrovi: zanrovi,
                 _sveRecenzije: recenzije,
-                _elementiKoncerta: new List<Izvodjac> { izvodjac }
+                _elementiKoncerta: new List<ElementSistema> { izvodjac , muzickaNumera}
             );
 
             // Kreiranje instance Album
@@ -142,7 +142,7 @@ namespace MuzickiKatalog.Model
                 _datumDesavanja: DateTime.Now.AddDays(-30),
                 _sviZanrovi: zanrovi,
                 _sveRecenzije: recenzije,
-                _elementiKoncerta: new List<Izvodjac> { izvodjac });
+                _elementiKoncerta: new List<ElementSistema> { izvodjac,muzickaNumera });
             koncert.Obrisi();
 
             
