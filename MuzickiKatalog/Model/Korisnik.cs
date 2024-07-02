@@ -144,6 +144,21 @@ namespace MuzickiKatalog.Model
             UpisiKorisnike(sviKorisnici);
         }
         //Glasaj
-        public void Glasaj() { }
+        public void Glasaj(Glasanje glasanje, ElementSistema izglasaniElement) 
+        {
+            if (!glasanje.Kandidati.Contains(izglasaniElement))
+            {
+                throw new Exception("Element nije deo takmicenja");
+            }
+            foreach(Glas glas in glasanje.Glasovi)
+            {
+                if (glas.Glasac.Id == Id)
+                { 
+                    throw new Exception("Korisnik je vec glasao");
+                }
+            }
+            Glas noviGlas = new Glas(this, izglasaniElement);
+            noviGlas.Dodaj(glasanje);
+        }
     }
 }

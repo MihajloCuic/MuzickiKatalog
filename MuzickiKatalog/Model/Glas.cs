@@ -20,40 +20,52 @@ namespace MuzickiKatalog.Model
         //parametarski konstruktor
         public Glas(Osoba _glasac, ElementSistema _izglasaniElement)
         {
+            Id = _glasac.Id;
             Glasac = _glasac;
             IzglasaniElement = _izglasaniElement;
         }
         //dodaj glas
-        public Dictionary<string, Glas> Dodaj(Dictionary<string, Glas> sviGlasovi) 
+        public void Dodaj(Glasanje glasanje) 
         {
-            if (sviGlasovi.ContainsKey(Id))
+            if (glasanje.Glasovi.Contains(this))
             {
                 throw new Exception("Glas vec postoji");
             }
-            sviGlasovi[Id] = this;
-            return sviGlasovi;
+            glasanje.Glasovi.Add(this);
+            Dictionary<int, Glasanje> svaGlasanja = Glasanje.UcitajGlasanja();
+            svaGlasanja[glasanje.Id] = glasanje;
+            Glasanje.UpisiGlasanja(svaGlasanja);
         }
         //izmeni glas
-        public Dictionary<string, Glas> Izmeni(ElementSistema izglasaniElement, Dictionary<string, Glas> sviGlasovi) 
+        public void Izmeni(ElementSistema izglasaniElement, Glasanje glasanje) 
         { 
-            IzglasaniElement = izglasaniElement;
-
-            if (!sviGlasovi.ContainsKey(Id))
+            if (!glasanje.Glasovi.Contains(this))
             { 
                 throw new Exception("Glas ne postoji");
             }
-            sviGlasovi[Id] = this;
-            return sviGlasovi;
+            foreach (Glas glas in glasanje.Glasovi)
+            {
+                if (glas.Id == Id)
+                {
+                    glas.IzglasaniElement = izglasaniElement;
+                    break;
+                }
+            }
+            Dictionary<int, Glasanje> svaGlasanja = Glasanje.UcitajGlasanja();
+            svaGlasanja[glasanje.Id] = glasanje;
+            Glasanje.UpisiGlasanja(svaGlasanja);
         }
         //obrisi glas
-        public Dictionary<string, Glas> Obrisi(Dictionary<string, Glas> sviGlasovi) 
+        public void Obrisi(Glasanje glasanje) 
         {
-            if (!sviGlasovi.ContainsKey(Id))
+            if (!glasanje.Glasovi.Contains(this))
             { 
                 throw new Exception("Glas ne postoji");
             }
-            sviGlasovi.Remove(Id);
-            return sviGlasovi;
+            glasanje.Glasovi.Remove(this);
+            Dictionary<int, Glasanje> svaGlasanja = Glasanje.UcitajGlasanja();
+            svaGlasanja[glasanje.Id] = glasanje;
+            Glasanje.UpisiGlasanja(svaGlasanja);
         }
     }
 }
