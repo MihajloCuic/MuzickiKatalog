@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace MuzickiKatalog.Helpers
 {
-    public class Helpers
+    public class PomocneFunkcije
     {
         //pravi id tipa int kao kombinaciju id-jeva osobe i elementa sistema
-        public int NapraviID(string idOsobe, int idElementaSistema)
-        { 
+        public static int NapraviID(string idOsobe, int idElementaSistema)
+        {
             int hashMail = idOsobe.GetHashCode();
             int noviId = hashMail ^ idElementaSistema;
             return noviId;
