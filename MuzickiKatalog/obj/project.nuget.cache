@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "M4+4Bx5DFhM=",
+  "dgSpecHash": "FIMc4C5WLsM=",
   "success": true,
   "projectFilePath": "C:\\Users\\Mihajlo\\Desktop\\Faks\\II godina\\II semestar\\Specifikacija i modeliranje softvera\\projekat\\MuzickiKatalog\\MuzickiKatalog\\MuzickiKatalog.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Mihajlo\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\8.0.6\\microsoft.aspnetcore.jsonpatch.8.0.6.nupkg.sha512",
+    "C:\\Users\\Mihajlo\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\8.0.6\\microsoft.aspnetcore.mvc.newtonsoftjson.8.0.6.nupkg.sha512",
+    "C:\\Users\\Mihajlo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Mihajlo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Mihajlo\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
