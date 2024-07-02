@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MuzickiKatalog.Helpers;
 using Newtonsoft.Json;
 
 namespace MuzickiKatalog.Model
@@ -39,7 +40,9 @@ namespace MuzickiKatalog.Model
             try
             {
                 string data = File.ReadAllText(fajl);
-                sviUrednici = JsonConvert.DeserializeObject<Dictionary<string, MuzickiUrednik>>(data);
+                JsonSerializerSettings settings = new JsonSerializerSettings();
+                settings.Converters.Add(new ElementSistemaConverter());
+                sviUrednici = JsonConvert.DeserializeObject<Dictionary<string, MuzickiUrednik>>(data, settings);
             }
             catch (IOException ex)
             {
@@ -52,7 +55,12 @@ namespace MuzickiKatalog.Model
         {
             try
             {
-                string data = JsonConvert.SerializeObject(sviUrednici, Formatting.Indented);
+                JsonSerializerSettings settings = new JsonSerializerSettings
+                {
+                    Formatting = Formatting.Indented,
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                };
+                string data = JsonConvert.SerializeObject(sviUrednici, settings);
                 File.WriteAllText(fajl, data);
             }
             catch (IOException ex)

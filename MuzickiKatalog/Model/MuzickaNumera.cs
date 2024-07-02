@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MuzickiKatalog.Model
 {
-    public class MuzickaNumera
+    public class MuzickaNumera : ElementSistema
     {
         private DateTime datumIzbacivanja;
         private List<ElementSistema> izvodjaci;
