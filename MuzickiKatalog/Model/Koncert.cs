@@ -50,33 +50,7 @@ namespace MuzickiKatalog.Model
         }
 
         //citanje koncerta iz fajla
-        public class ElementSistemaConverter : JsonConverter
-        {
-            public override bool CanConvert(Type objectType)
-            {
-                return (objectType == typeof(ElementSistema));
-            }
-
-            public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-            {
-                JObject jo = JObject.Load(reader);
-                if (jo["Grupa"] != null)
-                {
-                    return jo.ToObject<Izvodjac>(serializer);
-                }
-                else if (jo["DatumIzbacivanja"] != null)
-                {
-                    return jo.ToObject<MuzickaNumera>(serializer);
-                }
-                throw new Exception("Unknown type of ElementSistema");
-            }
-
-            public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-            {
-                JToken t = JToken.FromObject(value);
-                t.WriteTo(writer);
-            }
-        }
+       
         public static Dictionary<int,Koncert> UcitajKoncerte()
         {
             Dictionary<int, Koncert> sviKoncerti = new Dictionary<int, Koncert>();
