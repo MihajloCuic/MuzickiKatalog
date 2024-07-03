@@ -11,17 +11,17 @@ namespace MuzickiKatalog.Model
     {
         private int id;
         private string ime;
-        private List<MuzickaNumera> numere;
+        private Dictionary<int, MuzickaNumera> numere;
         private Status status;
 
         public int Id { get; set; }
         public string Ime { get; set; }
-        public List<MuzickaNumera> Numere { get; set; }
+        public Dictionary<int, MuzickaNumera> Numere { get; set; }
         public Status Status { get; set; }
         //base konstruktor
         public Playlista()
         { 
-            numere = new List<MuzickaNumera>();
+            numere = new Dictionary<int, MuzickaNumera>();
         }
         //parametarski konstruktor
         public Playlista(string _status, string _ime, Korisnik autorPlayliste)
@@ -29,10 +29,10 @@ namespace MuzickiKatalog.Model
             Id = PomocneFunkcije.NapraviIDPlaylistu(autorPlayliste.Id, _ime);
             Ime = _ime;
             Status = (Status)Enum.Parse(typeof(Status), _status);
-            Numere = new List<MuzickaNumera>();
+            Numere = new Dictionary<int, MuzickaNumera>();
         }
         //parametarski konstruktor sa inicijalizovanom playlistom
-        public Playlista(string _status, string _ime, Korisnik autorPlayliste, List<MuzickaNumera> _numere)
+        public Playlista(string _status, string _ime, Korisnik autorPlayliste, Dictionary<int, MuzickaNumera> _numere)
         {
             Id = PomocneFunkcije.NapraviIDPlaylistu(autorPlayliste.Id, _ime);
             Ime = _ime;
@@ -85,20 +85,20 @@ namespace MuzickiKatalog.Model
         //dodavanje numere na playlistu
         public void DodajNumeru(MuzickaNumera numera)
         {
-            if (Numere.Contains(numera))
+            if (Numere.ContainsKey(numera.Id))
             { 
                 throw new Exception("Numera je vec na playlisti");
             }
-            Numere.Add(numera);
+            Numere[numera.Id] = numera;
         }
         //uklanjanje numere sa playliste
         public void UkloniNumeru(MuzickaNumera numera)
         {
-            if (!Numere.Contains(numera))
-            { 
+            if (!Numere.ContainsKey(numera.Id))
+            {
                 throw new Exception("Numera nije na playlisti");
             }
-            Numere.Remove(numera);
+            Numere.Remove(numera.Id);
         }
     }
 }

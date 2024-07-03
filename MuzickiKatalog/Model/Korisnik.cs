@@ -175,6 +175,7 @@ namespace MuzickiKatalog.Model
                 Dictionary<string, Korisnik> sviKorisnici = UcitajKorisnike();
                 sviKorisnici[Id] = this;
                 UpisiKorisnike(sviKorisnici);
+                break;
             }
         }
         //Uklanjanje numere sa playliste

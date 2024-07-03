@@ -21,9 +21,9 @@ namespace MuzickiKatalog.Model
                 {
                     continue;
                 }
-                foreach (MuzickaNumera numera in playlista.Numere)
+                foreach (var numera in playlista.Numere)
                 {
-                    playlista.UkloniNumeru(numera);
+                    playlista.UkloniNumeru(numera.Value);
                 }
                 foreach (MuzickaNumera numera in numere)
                 { 
