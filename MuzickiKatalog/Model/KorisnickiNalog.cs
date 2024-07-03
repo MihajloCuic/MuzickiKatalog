@@ -58,6 +58,10 @@ namespace MuzickiKatalog.Model
         public void Dodaj()
         {
             Dictionary<string, KorisnickiNalog> sviKorisnickiNalozi = UcitajKorisnickeNaloge();
+            if (sviKorisnickiNalozi == null)
+            {
+                sviKorisnickiNalozi = new Dictionary<string, KorisnickiNalog>();
+            }
             if (sviKorisnickiNalozi.ContainsKey(KorisnickoIme))
             {
                 throw new Exception("Korisnicki nalog vec postoji");
@@ -66,12 +70,16 @@ namespace MuzickiKatalog.Model
             UpisiKorisnickeNaloge(sviKorisnickiNalozi);
         }
         //izmena lozinke na korisnickom nalogu
-        public void Izmeni(string _korisnickoIme,string _lozinka)
+        public void Izmeni(string _lozinka)
         {
-            KorisnickoIme = _korisnickoIme;
+            //KorisnickoIme = _korisnickoIme;
             Lozinka = _lozinka;
 
             Dictionary<string, KorisnickiNalog> sviKorisnickiNalozi = UcitajKorisnickeNaloge();
+            if (sviKorisnickiNalozi == null)
+            {
+                sviKorisnickiNalozi = new Dictionary<string, KorisnickiNalog>();
+            }
             if (!sviKorisnickiNalozi.ContainsKey(KorisnickoIme))
             {
                 throw new Exception("Ne postoji trazeni korisnicki nalog");
@@ -97,18 +105,31 @@ namespace MuzickiKatalog.Model
             {
                 if(sviKorisnickiNalozi[_korisnickoIme].Lozinka == _lozinka)
                 {
-
+                    if (sviKorisnickiNalozi[_korisnickoIme].VrstaKorisnika == VrstaKorisnika.administrator)
+                    {
+                        Dictionary<string, Administrator> sviAdministratori = Administrator.UcitajAdministratore();
+                        if(sviAdministratori.ContainsKey(_korisnickoIme)) return sviAdministratori[_korisnickoIme];
+                    }
+                    else if (sviKorisnickiNalozi[_korisnickoIme].VrstaKorisnika == VrstaKorisnika.muzickiUrednik)
+                    {
+                        Dictionary<string, MuzickiUrednik> sviMuzickiUrednici = MuzickiUrednik.UcitajUrednike();
+                        if (sviMuzickiUrednici.ContainsKey(_korisnickoIme)) return sviMuzickiUrednici[_korisnickoIme];
+                    }
+                    else
+                    {
+                        Dictionary<string, Korisnik> sviKorisnici = Korisnik.UcitajKorisnike();
+                        if(sviKorisnici.ContainsKey(_korisnickoIme)) return sviKorisnici[_korisnickoIme];
+                    }
                 }
                 
             }
-            return new Korisnik();
+            return null;
         }
         public static Korisnik Register(string _ime, string _prezime, string _email, string _telefon, string _lozinka)
         {
             Korisnik k = new Korisnik(_ime, _prezime, _email, _telefon, _email);
             KorisnickiNalog kn = new KorisnickiNalog(_email, _lozinka, VrstaKorisnika.korisnik);
             kn.Dodaj();
-            
             return k;
         }
         public static void Logout()

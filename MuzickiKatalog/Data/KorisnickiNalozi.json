@@ -1,0 +1,17 @@
+{
+  "user1": {
+    "KorisnickoIme": "user1",
+    "Lozinka": "password5",
+    "VrstaKorisnika": 0
+  },
+  "user2": {
+    "KorisnickoIme": "user2",
+    "Lozinka": "password",
+    "VrstaKorisnika": 2
+  },
+  "user3": {
+    "KorisnickoIme": "user3",
+    "Lozinka": "password",
+    "VrstaKorisnika": 1
+  }
+}
