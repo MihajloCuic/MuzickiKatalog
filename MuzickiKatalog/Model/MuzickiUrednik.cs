@@ -13,24 +13,30 @@ namespace MuzickiKatalog.Model
     {
         private static readonly string fajl = Path.Combine("..", "..", "..", "Data", "MuzickiUrednici.json");
         private List<Zanr> sviZanrovi;
+        private List<ElementSistema> trazeRecenziju;
         public List<Zanr> SviZanrovi { get; set; }
+        public List<int> TrazeRecenziju { get; set; }
         //base konstruktor
         public MuzickiUrednik() 
             :base()
         {
             SviZanrovi = new List<Zanr>();
+            TrazeRecenziju = new List<int>();
         }
         //parametarski konstruktor
         public MuzickiUrednik(string _ime, string _prezime, string _email, string _telefon, string _id)
             : base(_ime, _prezime, _email, _telefon, _id)
         {
             SviZanrovi = new List<Zanr>();
+            TrazeRecenziju = new List<int>();
         }
         //parametarski konstruktor sa inicijalizovanom listom
-        public MuzickiUrednik(string _ime, string _prezime, string _email, string _telefon, string _id, List<Recenzija> _sveRecenzije, List<Zanr> _sviZanrovi)
+        public MuzickiUrednik(string _ime, string _prezime, string _email, string _telefon, string _id, 
+            List<Recenzija> _sveRecenzije, List<Zanr> _sviZanrovi, List<int> _trazeRecenziju)
             : base(_ime, _prezime, _email, _telefon, _id, _sveRecenzije)
         {
             SviZanrovi = _sviZanrovi;
+            TrazeRecenziju = _trazeRecenziju;
         }
         //citanje muzickih urednika iz fajla
         public static Dictionary<string, MuzickiUrednik> UcitajUrednike()
@@ -101,13 +107,6 @@ namespace MuzickiKatalog.Model
             sviUrednici.Remove(Id);
             UpisiUrednike(sviUrednici);
         }
-        //Prikaz dodeljenih recenzija
-        public List<Recenzija> PrikaziDodeljeneRecenzije() 
-        {
-            List<Recenzija> dodeljeneRecenzije = new List<Recenzija>();
-            //TODO dodati logiku za prikaz dodeljenih recenzija
-            return dodeljeneRecenzije;
-        }
         //Dodavanje novog elementa
         //public ElementSistema DodavanjeElementaSistema() {}
         //Dodavanje nove recenzije
@@ -119,6 +118,10 @@ namespace MuzickiKatalog.Model
                 throw new Exception("Vec ste ostavili recenziju na ovaj element");
             }
             novaRecenzija.Dodaj();
+            if (TrazeRecenziju.Contains(recenziraniElement.Id))
+            { 
+                TrazeRecenziju.Remove(recenziraniElement.Id);
+            }
             Dictionary<string, MuzickiUrednik> sviUrednici = UcitajUrednike();
             sviUrednici[Id].SveRecenzije.Add(novaRecenzija);
             UpisiUrednike(sviUrednici);

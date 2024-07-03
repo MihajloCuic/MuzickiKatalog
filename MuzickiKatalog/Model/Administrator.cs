@@ -100,19 +100,32 @@ namespace MuzickiKatalog.Model
         //izmena muzickog urednika
         public void IzmenaMuzickogUrednika(MuzickiUrednik muzickiUrednik) { }
         //dodeljivanje recenzije
-        public void DodeliRecenziju(Recenzija recenzija, MuzickiUrednik muzickiUrednik) { }
-        //postavljanje reklame
-        public void PostaviReklamu() { }
+        public void DodeliRecenziju(ElementSistema element, MuzickiUrednik muzickiUrednik) 
+        {
+            if (muzickiUrednik.TrazeRecenziju.Contains(element.Id))
+            {
+                throw new Exception("Uredniku je vec zadat element na recenziju");
+            }
+            muzickiUrednik.TrazeRecenziju.Add(element.Id);
+            Dictionary<string, MuzickiUrednik> sviUrednici = MuzickiUrednik.UcitajUrednike();
+            sviUrednici[muzickiUrednik.Id] = muzickiUrednik;
+            MuzickiUrednik.UpisiUrednike(sviUrednici);
+        }
         //dodavanje glasanja
         //public Glasanje dodajGlasanje() { }
-        //uredjivanje pocetne stranice
-        public void UredjivanjePocetneStranice() { }
         //blokiranje korisnika
         public void BlokiranjeKorisnika(Korisnik korisnik) { }
         //brisanje neprikladne recenzije korisnika
-        public void BrisanjeKorisnickeRecenzije() { }
-        //davanje dozvole za izmenu recenzije
-        public void DozvolaIzmenaRecenzije(Recenzija recenzija, Korisnik korisnik) { }
+        public void BrisanjeKorisnickeRecenzije(Korisnik korisnik, Recenzija recenzija, ElementSistema recenziraniElement) 
+        { 
+            korisnik.SveRecenzije.Remove(recenzija);
+            Dictionary<string, Korisnik> sviKorisnici = Korisnik.UcitajKorisnike();
+            sviKorisnici[korisnik.Id] = korisnik;
+            Korisnik.UpisiKorisnike(sviKorisnici);
+
+            recenziraniElement.SveRecenzije.Remove(recenzija);
+            //TODO: izmena sacuvanog fajla elementa sistema
+        }
         //dodavanje novog zanra
         public void DodavanjeNovogZanra(Zanr noviZanr) { }
     }
