@@ -90,7 +90,90 @@ namespace MuzickiKatalog.Model
             UpisiAdministratore(sviAdministratori);
         }
         //dodavanje elementa sistema
-        //public ElementSistema DodavanjeElementaSistema() { }
+        public void DodajElementSistema(
+            string _ime,
+            int _prosecnaOcena,
+            string _opis,
+            int _id,
+            List<Zanr> _sviZanrovi,
+            List<Recenzija> _sveRecenzije,
+
+            DateTime? _datum = null,
+
+            List<ElementSistema> _izvodjaciKoncert = null,
+
+            List<MuzickaNumera> _muzickeNumere = null,
+
+            string _snimatelj = null,
+            string _formatPrikaza = null,
+
+            List<Izvodjac> _izvodjaci = null,
+
+            MuzickaGrupa _grupa = null
+
+            ///numera
+            //DateTime? datumIzbacivanja = null,
+            //List<Izvodjac> izvodjaci = null,
+
+            //koncert
+            //DateTime? datumDesavanja = null,
+            //string snimatelj = null,
+            //string formatPrikaza = null,
+            //List<ElementSistema> elementiKoncerta = null,
+
+            //album
+            //DateTime? datumIzdavanja = null,
+            //List<MuzickaNumera> numereAlbuma = null,
+            //List<Izvodjac> izvodjaciAlbum = null
+
+
+            ///grupa
+            //List<Izvodjac> izvodjaciGrupa = null,
+            //List<MuzickaNumera> numereGrupa = null,
+
+            //izvodjac
+            //List<MuzickaNumera> numereIzvodjac = null,
+            //MuzickaGrupa grupaIzvodjac = null
+            )
+        {
+            if (_datum == null)
+            {
+                if (_izvodjaci != null)
+                {
+                    //grupa
+                    MuzickaGrupa muzickaGrupa = new MuzickaGrupa(_ime, _prosecnaOcena, _opis, _id, _sviZanrovi, _sveRecenzije, _izvodjaci, _muzickeNumere);
+                    muzickaGrupa.Dodaj();
+                }
+                else
+                {
+                    //izvodjac
+                    Izvodjac izvodjac = new Izvodjac(_ime, _prosecnaOcena, _opis, _id, _grupa, _sviZanrovi, _sveRecenzije, _muzickeNumere);
+                    izvodjac.Dodaj();
+                }
+
+            }
+            else
+            {
+                if (_muzickeNumere != null)
+                {
+                    //album
+                    Album album = new Album(_ime, _prosecnaOcena, _opis, _id, _datum.GetValueOrDefault(), _sviZanrovi, _sveRecenzije, _muzickeNumere, _izvodjaci);
+                    album.Dodaj();
+                }
+                else if (_snimatelj != null)
+                {
+                    //koncert
+                    Koncert koncert = new Koncert(_ime, _prosecnaOcena, _opis, _id, _snimatelj, _formatPrikaza, _datum.GetValueOrDefault(), _sviZanrovi, _sveRecenzije, _izvodjaciKoncert);
+                    koncert.Dodaj();
+                }
+                else
+                {
+                    //numera
+                    MuzickaNumera muzickaNumera = new MuzickaNumera(_ime, _prosecnaOcena, _opis, _id, _datum.GetValueOrDefault(), _sviZanrovi, _sveRecenzije, _izvodjaci);
+                    muzickaNumera.Dodaj();
+                }
+            }
+        }
         //dodavanje muzickog urednika
         //public MuzickiUrednik DodavanjeMuzickogUrednika() { }
         //izmena elementa sistema

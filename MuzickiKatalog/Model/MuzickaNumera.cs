@@ -12,7 +12,7 @@ namespace MuzickiKatalog.Model
     {
         private static readonly string file = Path.Combine("..", "..", "..", "Data", "MuzickeNumere.json");
         private DateTime datumIzbacivanja;
-        private List<ElementSistema> izvodjaci;
+        private List<Izvodjac> izvodjaci;
 
         public DateTime DatumIzbacivanja { get; set; }
         public List<Izvodjac> Izvodjaci { get; set; }

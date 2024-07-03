@@ -35,6 +35,7 @@ namespace MuzickiKatalog.Model
                 _izvodjaci: new List<Izvodjac>(),
                 _numere: new List<MuzickaNumera>()
             );
+
             Izvodjac izvodjac = new Izvodjac(
                 _ime: "Izvodjac 1",
                 _prosecnaOcena: 5,
@@ -145,7 +146,63 @@ namespace MuzickiKatalog.Model
                 _elementiKoncerta: new List<ElementSistema> { izvodjac,muzickaNumera });
             koncert.Obrisi();
 
-            
+            MuzickiUrednik m = new MuzickiUrednik();
+
+            //koncert
+            m.DodajElementSistema(_ime: "Koncert 1",
+                _prosecnaOcena: 5,
+                _opis: "Veliki koncert je konza",
+                _id: 1,
+                _sviZanrovi: zanrovi,
+                _sveRecenzije: recenzije,
+                _datum: DateTime.Now.AddDays(-30),
+                _snimatelj: "Snimatelj 1",
+                _formatPrikaza: "HD",
+                _izvodjaciKoncert: new List<ElementSistema> { izvodjac, muzickaNumera });
+
+            //grupa
+            m.DodajElementSistema(
+                 _ime: "Grupa 1",
+                _prosecnaOcena: 5,
+                _opis: "Popularna muzička grupa",
+                _id: 1,
+                _sviZanrovi: zanrovi,
+                _sveRecenzije: recenzije,
+                _izvodjaci: new List<Izvodjac> { izvodjac },
+                _muzickeNumere: new List<MuzickaNumera>());
+
+            //numera
+            m.DodajElementSistema(
+                _ime: "Pesma 1",
+                _prosecnaOcena: 5,
+                _opis: "Prva pesma",
+                _id: 3,
+                _datum: DateTime.Now,
+                _sviZanrovi: zanrovi,
+                _sveRecenzije: recenzije,
+                _izvodjaci: new List<Izvodjac> { izvodjac });
+
+            //album
+            m.DodajElementSistema(
+                _ime: "Album 1",
+                _prosecnaOcena: 5,
+                _opis: "Debi album",
+                _id: 5,
+                _datum: DateTime.Now.AddYears(-1),
+                _sviZanrovi: zanrovi,
+                _sveRecenzije: recenzije,
+                _muzickeNumere: new List<MuzickaNumera> { muzickaNumera },
+                _izvodjaci: new List<Izvodjac> { izvodjac });
+            //izvodjac
+            m.DodajElementSistema(
+                _ime: "Izvodjac 1",
+                _prosecnaOcena: 5,
+                _opis: "Poznati izvođač",
+                _id: 2,
+                _grupa: muzickaGrupa,
+                _sviZanrovi: zanrovi,
+                _sveRecenzije: recenzije,
+                _muzickeNumere: new List<MuzickaNumera>());
         }
     }
 }
