@@ -93,26 +93,24 @@ namespace MuzickiKatalog.Model
         //public ElementSistema DodavanjeElementaSistema() { }
         //dodavanje muzickog urednika
         //public MuzickiUrednik DodavanjeMuzickogUrednika() { }
-        //prikaz svih muzickih urednika
-        //public List<MuzickiUrednik> prikazMuzickihUrednika() { }
         //izmena elementa sistema
         public void IzmenaElementaSistema(ElementSistema elementSistema) { }
         //izmena muzickog urednika
         public void IzmenaMuzickogUrednika(MuzickiUrednik muzickiUrednik) { }
         //dodeljivanje recenzije
         public void DodeliRecenziju(Recenzija recenzija, MuzickiUrednik muzickiUrednik) { }
-        //postavljanje reklame
-        public void PostaviReklamu() { }
         //dodavanje glasanja
         //public Glasanje dodajGlasanje() { }
-        //uredjivanje pocetne stranice
-        public void UredjivanjePocetneStranice() { }
         //blokiranje korisnika
-        public void BlokiranjeKorisnika(Korisnik korisnik) { }
+        public void BlokiranjeKorisnika(Korisnik korisnik) 
+        {
+            Dictionary<string, Korisnik> sviKorisnici = Korisnik.UcitajKorisnike();
+            korisnik.Blokiran = true;
+            sviKorisnici[korisnik.Id] = korisnik;
+            Korisnik.UpisiKorisnike(sviKorisnici);
+        }
         //brisanje neprikladne recenzije korisnika
         public void BrisanjeKorisnickeRecenzije() { }
-        //davanje dozvole za izmenu recenzije
-        public void DozvolaIzmenaRecenzije(Recenzija recenzija, Korisnik korisnik) { }
         //dodavanje novog zanra
         public void DodavanjeNovogZanra(Zanr noviZanr) { }
     }
