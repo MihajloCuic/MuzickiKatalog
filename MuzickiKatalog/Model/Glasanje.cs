@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MuzickiKatalog.Helpers;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,9 +33,9 @@ namespace MuzickiKatalog.Model
             Glasovi = new List<Glas>();
         }
         //parametarski konstruktor
-        public Glasanje(int _id, DateTime _datumPocetka, DateTime _datumZavrsetka, string _imeTakmicenja, List<int> _kandidati)
+        public Glasanje(DateTime _datumPocetka, DateTime _datumZavrsetka, string _imeTakmicenja, List<int> _kandidati)
         { 
-            Id = _id;
+            Id = PomocneFunkcije.NapraviIDGlasanja(_datumPocetka, _datumZavrsetka, _imeTakmicenja); ;
             DatumPocetka = _datumPocetka;
             DatumZavrsetka = _datumZavrsetka;
             imeTakmicenja = _imeTakmicenja;
@@ -42,10 +43,10 @@ namespace MuzickiKatalog.Model
             Glasovi = new List<Glas>();
         }
         //parametarski konstruktor sa inicijalizovanim listama
-        public Glasanje(int _id, DateTime _datumPocetka, DateTime _datumZavrsetka, string _imeTakmicenja,
+        public Glasanje(DateTime _datumPocetka, DateTime _datumZavrsetka, string _imeTakmicenja,
             List<int> _kandidati, List<Glas> _glasovi)
         {
-            Id = _id;
+            Id = PomocneFunkcije.NapraviIDGlasanja(_datumPocetka, _datumZavrsetka, _imeTakmicenja); ;
             DatumPocetka = _datumPocetka;
             DatumZavrsetka = _datumZavrsetka;
             imeTakmicenja = _imeTakmicenja;

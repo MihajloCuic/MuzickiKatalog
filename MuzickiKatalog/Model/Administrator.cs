@@ -105,14 +105,13 @@ namespace MuzickiKatalog.Model
         //dodavanje glasanja
         public void dodajGlasanje(DateTime datumPocetka, DateTime datumZavrsetka, string imeTakmicenja, List<int> kandidati)  
         {
-            int id = PomocneFunkcije.NapraviIDGlasanja(datumPocetka, datumZavrsetka, imeTakmicenja);
-            Glasanje novoGlasanje = new Glasanje(id, datumPocetka, datumZavrsetka, imeTakmicenja, kandidati);
+            Glasanje novoGlasanje = new Glasanje(datumPocetka, datumZavrsetka, imeTakmicenja, kandidati);
             Dictionary<int, Glasanje> svaGlasanja = Glasanje.UcitajGlasanja();
-            if (svaGlasanja.ContainsKey(id))
+            if (svaGlasanja.ContainsKey(novoGlasanje.Id))
             {
                 throw new Exception("Takmicenje vec postoji");
             }
-            svaGlasanja[id] = novoGlasanje;
+            svaGlasanja[novoGlasanje.Id] = novoGlasanje;
             Glasanje.UpisiGlasanja(svaGlasanja);
         }
         public void BlokiranjeKorisnika(Korisnik korisnik) { }
