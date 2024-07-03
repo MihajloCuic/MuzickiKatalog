@@ -16,20 +16,20 @@ namespace MuzickiKatalog.Model
         private int id;
         private string opis;
         private double ocena;
-        private Osoba recezent;
-        private ElementSistema recenziraniElement;
+        private string recezent;
+        private int recenziraniElement;
 
         public int Id { get; set; }
         public string Opis { get; set; }
         public int Ocena { get; set; }
-        public Osoba Recezent { get; set; }
-        public ElementSistema RecenziraniElement { get; set; }
+        public string Recezent { get; set; }
+        public int RecenziraniElement { get; set; }
         //base konstruktor
         public Recenzija() { }
         //parametarski konstruktor
-        public Recenzija(string _opis, int _ocena, Osoba _recezent, ElementSistema _recenziraniElement)
+        public Recenzija(string _opis, int _ocena, string _recezent, int _recenziraniElement)
         {
-            Id = PomocneFunkcije.NapraviID(_recezent.Id, _recenziraniElement.Id);
+            Id = PomocneFunkcije.NapraviID(_recezent, _recenziraniElement);
             Opis = _opis;
             Ocena = _ocena;
             Recezent = _recezent;

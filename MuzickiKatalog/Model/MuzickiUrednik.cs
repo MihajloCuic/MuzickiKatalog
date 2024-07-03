@@ -113,7 +113,7 @@ namespace MuzickiKatalog.Model
         //Dodavanje nove recenzije
         public void OstaviRecenziju(string opis, int ocena, ElementSistema recenziraniElement) 
         {
-            Recenzija novaRecenzija = new Recenzija(opis, ocena, this, recenziraniElement);
+            Recenzija novaRecenzija = new Recenzija(opis, ocena, Id, recenziraniElement.Id);
             if (SveRecenzije.Contains(novaRecenzija))
             { 
                 throw new Exception("Vec ste ostavili recenziju na ovaj element");
