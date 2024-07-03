@@ -1,0 +1,42 @@
+﻿<Window x:Class="MuzickiKatalog.View.Glasanja"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MuzickiKatalog.View"
+        mc:Ignorable="d"
+        Title="Glasanja" Height="450" Width="800"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,-50">
+        <Label x:Name="naslovLabela" Content="Glasanja" HorizontalAlignment="Center" Height="50" Margin="0,50,0,0" VerticalAlignment="Top" Width="120" FontSize="25" FontWeight="Bold" FontStyle="Italic"/>
+        <Button x:Name="exitDugme" Content="X" HorizontalAlignment="Left" Height="20" Margin="770,10,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold"/>
+        <Button x:Name="minimizeDugme" Content="_" HorizontalAlignment="Left" Height="20" Margin="745,10,0,0" VerticalAlignment="Top" Width="20"/>
+        <Menu x:Name="menuKorisnik" Visibility="Visible" HorizontalAlignment="Center" Height="57" Margin="0,443,0,0" VerticalAlignment="Top" Width="800">
+            <MenuItem Header="                      Prikaz" Width="200" Height="57"/>
+            <MenuItem Header="                      Pretraga" Width="200" Height="57"/>
+            <MenuItem Header="                      Glasanja" Width="200" Height="57"/>
+            <MenuItem Header="                      Nalog" Width="200" Height="57"/>
+        </Menu>
+        <Menu x:Name="menuUrednik" Visibility="Hidden" HorizontalAlignment="Center" Height="57" Margin="0,443,0,0" VerticalAlignment="Top" Width="800">
+            <MenuItem Header="                  Prikaz" Width="160" Height="57"/>
+            <MenuItem Header="               Pretraga" Width="160" Height="57"/>
+            <MenuItem Header="                  Dodaj" Width="160" Height="57"/>
+            <MenuItem Header="               Glasanja" Width="160" Height="57"/>
+            <MenuItem Header="               Recenzije" Width="160" Height="57"/>
+        </Menu>
+        <Menu x:Name="menuAdmin" Visibility="Hidden" HorizontalAlignment="Center" Height="57" Margin="0,443,0,0" VerticalAlignment="Top" Width="800">
+            <MenuItem Header="                      Prikaz" Width="200" Height="57"/>
+            <MenuItem Header="                      Pretraga" Width="200" Height="57"/>
+            <MenuItem Header="                      Dodaj" Width="200" Height="57"/>
+            <MenuItem Header="                      Urednici" Width="200" Height="57"/>
+        </Menu>
+        <ListView HorizontalAlignment="Center" Height="320" Margin="0,100,0,0" VerticalAlignment="Top" Width="700" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
