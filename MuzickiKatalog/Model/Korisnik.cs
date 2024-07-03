@@ -146,7 +146,7 @@ namespace MuzickiKatalog.Model
         //Glasaj
         public void Glasaj(Glasanje glasanje, ElementSistema izglasaniElement) 
         {
-            if (!glasanje.Kandidati.Contains(izglasaniElement))
+            if (!glasanje.Kandidati.Contains(izglasaniElement.Id))
             {
                 throw new Exception("Element nije deo takmicenja");
             }

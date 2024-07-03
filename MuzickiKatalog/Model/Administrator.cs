@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MuzickiKatalog.Helpers;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -101,18 +102,22 @@ namespace MuzickiKatalog.Model
         public void IzmenaMuzickogUrednika(MuzickiUrednik muzickiUrednik) { }
         //dodeljivanje recenzije
         public void DodeliRecenziju(Recenzija recenzija, MuzickiUrednik muzickiUrednik) { }
-        //postavljanje reklame
-        public void PostaviReklamu() { }
         //dodavanje glasanja
-        //public Glasanje dodajGlasanje() { }
-        //uredjivanje pocetne stranice
-        public void UredjivanjePocetneStranice() { }
-        //blokiranje korisnika
+        public void dodajGlasanje(DateTime datumPocetka, DateTime datumZavrsetka, string imeTakmicenja, List<int> kandidati)  
+        {
+            int id = PomocneFunkcije.NapraviIDGlasanja(datumPocetka, datumZavrsetka, imeTakmicenja);
+            Glasanje novoGlasanje = new Glasanje(id, datumPocetka, datumZavrsetka, imeTakmicenja, kandidati);
+            Dictionary<int, Glasanje> svaGlasanja = Glasanje.UcitajGlasanja();
+            if (svaGlasanja.ContainsKey(id))
+            {
+                throw new Exception("Takmicenje vec postoji");
+            }
+            svaGlasanja[id] = novoGlasanje;
+            Glasanje.UpisiGlasanja(svaGlasanja);
+        }
         public void BlokiranjeKorisnika(Korisnik korisnik) { }
         //brisanje neprikladne recenzije korisnika
         public void BrisanjeKorisnickeRecenzije() { }
-        //davanje dozvole za izmenu recenzije
-        public void DozvolaIzmenaRecenzije(Recenzija recenzija, Korisnik korisnik) { }
         //dodavanje novog zanra
         public void DodavanjeNovogZanra(Zanr noviZanr) { }
     }

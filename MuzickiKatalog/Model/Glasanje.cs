@@ -16,32 +16,34 @@ namespace MuzickiKatalog.Model
         private DateTime datumPocetka;
         private DateTime datumZavrsetka;
         private string imeTakmicenja;
-        private List<ElementSistema> kandidati;
+        private List<int> kandidati;
         private List<Glas> glasovi;
 
         public int Id { get; set; }
         public DateTime DatumPocetka { get; set; }
         public DateTime DatumZavrsetka { get; set; }
         public string ImeTakmicenja { get; set; }
-        public List<ElementSistema> Kandidati { get; set; }
+        public List<int> Kandidati { get; set; }
         public List<Glas> Glasovi { get; set; }
         //base konstruktor
         public Glasanje() 
         { 
-            Kandidati = new List<ElementSistema>();
+            Kandidati = new List<int>();
             Glasovi = new List<Glas>();
         }
         //parametarski konstruktor
-        public Glasanje(int _id, DateTime _datumPocetka, DateTime _datumZavrsetka, string _imeTakmicenja)
+        public Glasanje(int _id, DateTime _datumPocetka, DateTime _datumZavrsetka, string _imeTakmicenja, List<int> _kandidati)
         { 
             Id = _id;
             DatumPocetka = _datumPocetka;
             DatumZavrsetka = _datumZavrsetka;
             imeTakmicenja = _imeTakmicenja;
+            Kandidati = _kandidati;
+            Glasovi = new List<Glas>();
         }
         //parametarski konstruktor sa inicijalizovanim listama
         public Glasanje(int _id, DateTime _datumPocetka, DateTime _datumZavrsetka, string _imeTakmicenja,
-            List<ElementSistema> _kandidati, List<Glas> _glasovi)
+            List<int> _kandidati, List<Glas> _glasovi)
         {
             Id = _id;
             DatumPocetka = _datumPocetka;
