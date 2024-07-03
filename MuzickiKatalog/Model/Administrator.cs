@@ -195,6 +195,10 @@ namespace MuzickiKatalog.Model
         //brisanje neprikladne recenzije korisnika
         public void BrisanjeKorisnickeRecenzije() { }
         //dodavanje novog zanra
-        public void DodavanjeNovogZanra(Zanr noviZanr) { }
+        public void DodavanjeNovogZanra(int _id, string _naziv) 
+        {
+            Zanr noviZanr = new Zanr(_id, _naziv);
+            noviZanr.Dodaj();
+        }
     }
 }
