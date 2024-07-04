@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MuzickiKatalog.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,12 @@ namespace MuzickiKatalog.View
     /// </summary>
     public partial class PrikazElementaSistema : Window
     {
-        public PrikazElementaSistema()
+        Osoba osoba;
+        ElementSistema element;
+        public PrikazElementaSistema(Osoba _osoba, ElementSistema _element)
         {
+            osoba = _osoba;
+            element = _element;
             InitializeComponent();
         }
     }

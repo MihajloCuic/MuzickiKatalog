@@ -14,14 +14,14 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Button x:Name="exitDugme" Content="X" HorizontalAlignment="Left" Height="20" Margin="770,10,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold"/>
-        <Button x:Name="minimizeDugme" Content="_" HorizontalAlignment="Left" Height="20" Margin="745,10,0,0" VerticalAlignment="Top" Width="20"/>
-        <Button x:Name="logDugme" Content="Login" HorizontalAlignment="Left" Height="20" Margin="16,20,0,0" VerticalAlignment="Top" Width="70"/>
-        <Button x:Name="registerDugme" Content="Register" HorizontalAlignment="Left" Height="20" Margin="91,20,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button x:Name="exitDugme" Content="X" HorizontalAlignment="Left" Height="20" Margin="759,10,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold" Click="exitDugme_Click"/>
+        <Button x:Name="minimizeDugme" Content="_" HorizontalAlignment="Left" Height="20" Margin="734,10,0,0" VerticalAlignment="Top" Width="20" Click="minimizeDugme_Click"/>
+        <Button x:Name="logDugme" Content="Login" HorizontalAlignment="Left" Height="20" Margin="16,20,0,0" VerticalAlignment="Top" Width="70" Click="logDugme_Click"/>
+        <Button x:Name="registerDugme" Content="Register" HorizontalAlignment="Left" Height="20" Margin="91,20,0,0" VerticalAlignment="Top" Width="70" Click="registerDugme_Click"/>
         <Label x:Name="naslovLabela" Content="Muzicki Katalog" HorizontalAlignment="Center" Height="50" Margin="0,50,0,0" VerticalAlignment="Top" Width="200" FontSize="25" FontWeight="Bold" FontStyle="Italic"/>
         <StackPanel HorizontalAlignment="Left" Height="230" Margin="90,160,0,0" VerticalAlignment="Top" Width="250">
             <Label Content="Playlista meseca" Height="30" FontSize="15" HorizontalAlignment="Center"/>
-            <ListView Height="200" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListView Height="200" d:ItemsSource="{d:SampleData ItemCount=5}" Width="240">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn/>
@@ -31,7 +31,7 @@
         </StackPanel>
         <StackPanel Width="250" Margin="455,160,95,110">
             <Label Content="Playlista godine" Height="30" FontSize="15" HorizontalAlignment="Center"/>
-            <ListView Height="200" d:ItemsSource="{d:SampleData ItemCount=5}" RenderTransformOrigin="0.488,0.72">
+            <ListView Height="200" d:ItemsSource="{d:SampleData ItemCount=5}" RenderTransformOrigin="0.488,0.72" Width="240">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn/>

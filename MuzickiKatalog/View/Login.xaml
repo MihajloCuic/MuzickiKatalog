@@ -9,8 +9,8 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="exitDugme" Content="X" HorizontalAlignment="Left" Height="20" Margin="372,10,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold"/>
-        <Button x:Name="minimizeDugme" Content="_" HorizontalAlignment="Left" Height="20" Margin="347,10,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.579,0.603"/>
+        <Button x:Name="exitDugme" Content="X" HorizontalAlignment="Left" Height="20" Margin="361,10,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold"/>
+        <Button x:Name="minimizeDugme" Content="_" HorizontalAlignment="Left" Height="20" Margin="336,10,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.579,0.603"/>
         <Label x:Name="naslovLabela" Content="LOGIN" HorizontalAlignment="Center" Height="75" Margin="0,60,0,0" VerticalAlignment="Top" Width="160" FontWeight="Bold" FontSize="50"/>
         <Label x:Name="korisnickoImeLabela" Content="Korisnicko ime" HorizontalAlignment="Center" Height="40" Margin="0,168,0,0" VerticalAlignment="Top" Width="125" FontSize="18"/>
         <Label x:Name="lozinkaLabela" Content="Lozinka" HorizontalAlignment="Center" Height="35" Margin="0,252,0,0" VerticalAlignment="Top" Width="70" FontSize="18"/>

@@ -7,7 +7,63 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\Dodavanje.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\dodavanjeRecenzije.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Glasanja.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Message.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Pocetna.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Pretraga.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PrikazElementaSistema.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Register.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Dodavanje.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\dodavanjeRecenzije.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Glasanja.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Message.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pocetna.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pretraga.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PrikazElementaSistema.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Register.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
