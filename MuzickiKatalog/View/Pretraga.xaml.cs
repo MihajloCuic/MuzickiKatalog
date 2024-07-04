@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MuzickiKatalog.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,10 @@ namespace MuzickiKatalog.View
     /// </summary>
     public partial class Pretraga : Window
     {
-        public Pretraga()
+        Osoba osoba;
+        public Pretraga(Osoba ulogovan)
         {
+            osoba = ulogovan;
             InitializeComponent();
         }
     }

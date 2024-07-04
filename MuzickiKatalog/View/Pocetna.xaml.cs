@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MuzickiKatalog.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,38 @@ namespace MuzickiKatalog.View
     /// </summary>
     public partial class Pocetna : Window
     {
+        Osoba ulogovan;
         public Pocetna()
         {
+            ulogovan = null;
             InitializeComponent();
+        }
+        public Pocetna(Korisnik korisnik)
+        {
+            ulogovan = korisnik;
+            InitializeComponent();
+            menuNeregistrovani.Visibility = Visibility.Hidden;
+            menuKorisnik.Visibility = Visibility.Visible;
+            registerDugme.Visibility = Visibility.Hidden;
+            logDugme.Content = "Logout";
+        }
+        public Pocetna(MuzickiUrednik urednik)
+        {
+            ulogovan = urednik;
+            InitializeComponent();
+            menuNeregistrovani.Visibility = Visibility.Hidden;
+            menuUrednik.Visibility = Visibility.Visible;
+            registerDugme.Visibility = Visibility.Hidden;
+            logDugme.Content = "Logout";
+        }
+        public Pocetna(Administrator admin)
+        {
+            ulogovan = admin;
+            InitializeComponent();
+            menuNeregistrovani.Visibility = Visibility.Hidden;
+            menuAdmin.Visibility = Visibility.Visible;
+            registerDugme.Visibility = Visibility.Hidden;
+            logDugme.Content = "Logout";
         }
 
         private void exitDugme_Click(object sender, RoutedEventArgs e)
@@ -36,15 +66,30 @@ namespace MuzickiKatalog.View
 
         private void logDugme_Click(object sender, RoutedEventArgs e)
         {
-            Login login = new Login();
-            login.Show();
-            this.Close();
+            if (ulogovan != null)
+            {
+                Pocetna pocetna = new Pocetna();
+                pocetna.Show();
+                this.Close();
+            }
+            else {
+                Login login = new Login();
+                login.Show();
+                this.Close();
+            }
         }
 
         private void registerDugme_Click(object sender, RoutedEventArgs e)
         {
             Register register = new Register();
             register.Show();
+            this.Close();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Pretraga pretraga = new Pretraga(ulogovan);
+            pretraga.Show();
             this.Close();
         }
     }

@@ -1,0 +1,24 @@
+{
+  "mihajlo@gmail.com": {
+    "SvePlayliste": [],
+    "Omiljeno": [],
+    "Blokiran": false,
+    "Ime": "mihajlo",
+    "Prezime": "cuic",
+    "Email": "mihajlo@gmail.com",
+    "Telefon": "00612753009",
+    "Id": "mihajlo@gmail.com",
+    "SveRecenzije": []
+  },
+  "petar@gmail.com": {
+    "SvePlayliste": [],
+    "Omiljeno": [],
+    "Blokiran": false,
+    "Ime": "petar",
+    "Prezime": "peric",
+    "Email": "petar@gmail.com",
+    "Telefon": "438027594325",
+    "Id": "petar@gmail.com",
+    "SveRecenzije": []
+  }
+}

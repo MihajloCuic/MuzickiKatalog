@@ -40,25 +40,25 @@
             </ListView>
         </StackPanel>
         <Menu x:Name="menuNeregistrovani" Visibility="Visible" HorizontalAlignment="Center" Height="57" Margin="0,443,0,0" VerticalAlignment="Top" Width="800">
-            <MenuItem Header="                                                      Prikaz" Width="400" Height="57"/>
-            <MenuItem Header="                                                      Pretraga" Width="400" Height="57"/>
+            <MenuItem Header="                                                      Prikaz" Width="400" Height="57" Background="#FF929292"/>
+            <MenuItem Header="                                                      Pretraga" Width="400" Height="57" Click="MenuItem_Click"/>
         </Menu>
         <Menu x:Name="menuKorisnik" Visibility="Hidden" HorizontalAlignment="Center" Height="57" Margin="0,443,0,0" VerticalAlignment="Top" Width="800">
-            <MenuItem Header="                      Prikaz" Width="200" Height="57"/>
-            <MenuItem Header="                      Pretraga" Width="200" Height="57"/>
+            <MenuItem Header="                      Prikaz" Width="200" Height="57" Background="#FF929292"/>
+            <MenuItem Header="                      Pretraga" Width="200" Height="57" Click="MenuItem_Click"/>
             <MenuItem Header="                      Glasanja" Width="200" Height="57"/>
             <MenuItem Header="                      Nalog" Width="200" Height="57"/>
         </Menu>
         <Menu x:Name="menuUrednik" Visibility="Hidden" HorizontalAlignment="Center" Height="57" Margin="0,443,0,0" VerticalAlignment="Top" Width="800">
-            <MenuItem Header="                  Prikaz" Width="160" Height="57"/>
-            <MenuItem Header="               Pretraga" Width="160" Height="57"/>
+            <MenuItem Header="                  Prikaz" Width="160" Height="57" Background="#FF929292"/>
+            <MenuItem Header="               Pretraga" Width="160" Height="57"  Click="MenuItem_Click"/>
             <MenuItem Header="                  Dodaj" Width="160" Height="57"/>
             <MenuItem Header="               Glasanja" Width="160" Height="57"/>
             <MenuItem Header="               Recenzije" Width="160" Height="57"/>
         </Menu>
         <Menu x:Name="menuAdmin" Visibility="Hidden" HorizontalAlignment="Center" Height="57" Margin="0,443,0,0" VerticalAlignment="Top" Width="800">
-            <MenuItem Header="                      Prikaz" Width="200" Height="57"/>
-            <MenuItem Header="                      Pretraga" Width="200" Height="57"/>
+            <MenuItem Header="                      Prikaz" Width="200" Height="57" Background="#FF929292"/>
+            <MenuItem Header="                      Pretraga" Width="200" Height="57"  Click="MenuItem_Click"/>
             <MenuItem Header="                      Dodaj" Width="200" Height="57"/>
             <MenuItem Header="                      Urednici" Width="200" Height="57"/>
         </Menu>
