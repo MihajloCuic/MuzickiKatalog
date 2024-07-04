@@ -1,0 +1,20 @@
+{
+  "milos@gmail.com": {
+    "SviZanrovi": [],
+    "Ime": "milos",
+    "Prezime": "milosavljevic",
+    "Email": "milos@gmail.com",
+    "Telefon": "123123",
+    "Id": "milos@gmail.com",
+    "SveRecenzije": []
+  },
+  "milos123": {
+    "SviZanrovi": [],
+    "Ime": "milos",
+    "Prezime": "milosavljevic",
+    "Email": "milos@gmail.com",
+    "Telefon": "123123",
+    "Id": "miloss@gmail.com",
+    "SveRecenzije": []
+  }
+}

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Mihajlo\Desktop\Faks\II godina\II semestar\Specifikacija i modeliranje softvera\projekat\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\
 MuzickiKatalog
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Mihajlo\Desktop\Faks\II godina\II semestar\Specifikacija i modeliranje softvera\projekat\MuzickiKatalog\MuzickiKatalog\App.xaml
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\App.xaml
 10606507651
 
 34-1016974566
-338-825282341
+338-85458438
 MainWindow.xaml;View\Dodavanje.xaml;View\dodavanjeRecenzije.xaml;View\Glasanja.xaml;View\Login.xaml;View\Message.xaml;View\Pocetna.xaml;View\Pretraga.xaml;View\PrikazElementaSistema.xaml;View\Register.xaml;
 
 False

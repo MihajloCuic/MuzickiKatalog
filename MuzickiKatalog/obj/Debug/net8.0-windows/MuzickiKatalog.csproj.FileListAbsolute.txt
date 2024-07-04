@@ -70,3 +70,21 @@ C:\Users\Mihajlo\Desktop\Faks\II godina\II semestar\Specifikacija i modeliranje 
 C:\Users\Mihajlo\Desktop\Faks\II godina\II semestar\Specifikacija i modeliranje softvera\projekat\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\MuzickiK.F8626DD0.Up2Date
 C:\Users\Mihajlo\Desktop\Faks\II godina\II semestar\Specifikacija i modeliranje softvera\projekat\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\MuzickiKatalog.genruntimeconfig.cache
 C:\Users\Mihajlo\Desktop\Faks\II godina\II semestar\Specifikacija i modeliranje softvera\projekat\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\ref\MuzickiKatalog.dll
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\Dodavanje.g.cs
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\dodavanjeRecenzije.g.cs
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\Glasanja.g.cs
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\Login.g.cs
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\Message.g.cs
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\Pocetna.g.cs
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\Pretraga.g.cs
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\PrikazElementaSistema.g.cs
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\Register.g.cs
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\Dodavanje.baml
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\dodavanjeRecenzije.baml
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\Glasanja.baml
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\Login.baml
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\Message.baml
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\Pocetna.baml
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\Pretraga.baml
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\PrikazElementaSistema.baml
+C:\Users\hp\Documents\GitHub\MuzickiKatalog\MuzickiKatalog\obj\Debug\net8.0-windows\View\Register.baml
