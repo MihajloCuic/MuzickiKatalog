@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using Newtonsoft.Json;
 
 namespace MuzickiKatalog.Model
@@ -155,15 +156,20 @@ namespace MuzickiKatalog.Model
             //MuzickaGrupa grupaIzvodjac = null
             )
         {
+            int m = 0;
             if (_datum == null)
             {
                 if (_izvodjaci != null)
                 {
-                    //grupa
-                    MuzickaGrupa muzickaGrupa = new MuzickaGrupa(_ime, _prosecnaOcena, _opis, _id, _sviZanrovi, _sveRecenzije, _izvodjaci, _muzickeNumere);
-                    muzickaGrupa.Dodaj();
+                    if (_izvodjaci[0] != null)
+                    {
+                        //grupa
+                        MuzickaGrupa muzickaGrupa = new MuzickaGrupa(_ime, _prosecnaOcena, _opis, _id, _sviZanrovi, _sveRecenzije, _izvodjaci, _muzickeNumere);
+                        muzickaGrupa.Dodaj();
+                    }
+                    
                 }
-                else
+                else if(_grupa!=null)
                 {
                     //izvodjac
                     Izvodjac izvodjac = new Izvodjac(_ime, _prosecnaOcena, _opis, _id, _grupa, _sviZanrovi, _sveRecenzije, _muzickeNumere);
@@ -173,17 +179,25 @@ namespace MuzickiKatalog.Model
             }
             else
             {
-                if (_muzickeNumere != null)
-                {
-                    //album
-                    Album album = new Album(_ime, _prosecnaOcena, _opis, _id, _datum.GetValueOrDefault(), _sviZanrovi, _sveRecenzije, _muzickeNumere, _izvodjaci);
-                    album.Dodaj();
-                }
-                else if (_snimatelj != null)
+
+                if (_snimatelj != null && _snimatelj!="")
                 {
                     //koncert
                     Koncert koncert = new Koncert(_ime, _prosecnaOcena, _opis, _id, _snimatelj, _formatPrikaza, _datum.GetValueOrDefault(), _sviZanrovi, _sveRecenzije, _izvodjaciKoncert);
                     koncert.Dodaj();
+                }
+                else if (_muzickeNumere != null)
+                {
+                    if (_muzickeNumere[0]!=null)
+                    {
+                        //album
+                        Album album = new Album(_ime, _prosecnaOcena, _opis, _id, _datum.GetValueOrDefault(), _sviZanrovi, _sveRecenzije, _muzickeNumere, _izvodjaci);
+                        album.Dodaj();
+                        return;
+                    }
+                    //numera
+                    MuzickaNumera muzickaNumera = new MuzickaNumera(_ime, _prosecnaOcena, _opis, _id, _datum.GetValueOrDefault(), _sviZanrovi, _sveRecenzije, _izvodjaci);
+                    muzickaNumera.Dodaj();
                 }
                 else
                 {

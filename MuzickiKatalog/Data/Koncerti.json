@@ -1,1 +1,501 @@
-{}
+{
+  "4": {
+    "Snimatelj": "Snimatelj 1",
+    "FormatPrikaza": "HD",
+    "DatumDesavanja": "2024-06-05T00:31:29.3333428+02:00",
+    "ElementiKoncerta": [
+      {
+        "Numere": [],
+        "Grupa": {
+          "Izvodjaci": [],
+          "Numere": [],
+          "Ime": "Grupa Test Izmenjena",
+          "ProsecnaOcena": 4,
+          "Opis": "Izmenjeni opis testne muzičke grupe",
+          "Id": 1,
+          "SviZanrovi": [
+            {
+              "Id": 1,
+              "Naziv": "Rock"
+            },
+            {
+              "Id": 2,
+              "Naziv": "Pop"
+            }
+          ],
+          "SveRecenzije": [
+            {
+              "Id": 1,
+              "Opis": "Odlična pesma!",
+              "Ocena": 5,
+              "Recezent": null,
+              "RecenziraniElement": 0
+            },
+            {
+              "Id": 2,
+              "Opis": "Dobra melodija.",
+              "Ocena": 4,
+              "Recezent": null,
+              "RecenziraniElement": 0
+            }
+          ]
+        },
+        "Ime": "Izvodjac 1",
+        "ProsecnaOcena": 5,
+        "Opis": "Poznati izvođač nad izvodjacima",
+        "Id": 2,
+        "SviZanrovi": [
+          {
+            "Id": 1,
+            "Naziv": "Rock"
+          },
+          {
+            "Id": 2,
+            "Naziv": "Pop"
+          }
+        ],
+        "SveRecenzije": [
+          {
+            "Id": 1,
+            "Opis": "Odlična pesma!",
+            "Ocena": 5,
+            "Recezent": null,
+            "RecenziraniElement": 0
+          },
+          {
+            "Id": 2,
+            "Opis": "Dobra melodija.",
+            "Ocena": 4,
+            "Recezent": null,
+            "RecenziraniElement": 0
+          }
+        ]
+      },
+      {
+        "DatumIzbacivanja": "2024-07-05T00:31:23.1100907+02:00",
+        "Izvodjaci": [
+          {
+            "Numere": [],
+            "Grupa": {
+              "Izvodjaci": [],
+              "Numere": [],
+              "Ime": "Grupa Test Izmenjena",
+              "ProsecnaOcena": 4,
+              "Opis": "Izmenjeni opis testne muzičke grupe",
+              "Id": 1,
+              "SviZanrovi": [
+                {
+                  "Id": 1,
+                  "Naziv": "Rock"
+                },
+                {
+                  "Id": 2,
+                  "Naziv": "Pop"
+                }
+              ],
+              "SveRecenzije": [
+                {
+                  "Id": 1,
+                  "Opis": "Odlična pesma!",
+                  "Ocena": 5,
+                  "Recezent": null,
+                  "RecenziraniElement": 0
+                },
+                {
+                  "Id": 2,
+                  "Opis": "Dobra melodija.",
+                  "Ocena": 4,
+                  "Recezent": null,
+                  "RecenziraniElement": 0
+                }
+              ]
+            },
+            "Ime": "Izvodjac 1",
+            "ProsecnaOcena": 5,
+            "Opis": "Poznati izvođač nad izvodjacima",
+            "Id": 2,
+            "SviZanrovi": [
+              {
+                "Id": 1,
+                "Naziv": "Rock"
+              },
+              {
+                "Id": 2,
+                "Naziv": "Pop"
+              }
+            ],
+            "SveRecenzije": [
+              {
+                "Id": 1,
+                "Opis": "Odlična pesma!",
+                "Ocena": 5,
+                "Recezent": null,
+                "RecenziraniElement": 0
+              },
+              {
+                "Id": 2,
+                "Opis": "Dobra melodija.",
+                "Ocena": 4,
+                "Recezent": null,
+                "RecenziraniElement": 0
+              }
+            ]
+          }
+        ],
+        "Ime": "Pesma 1",
+        "ProsecnaOcena": 5,
+        "Opis": "Prva pesma je konza",
+        "Id": 3,
+        "SviZanrovi": [
+          {
+            "Id": 1,
+            "Naziv": "Rock"
+          },
+          {
+            "Id": 2,
+            "Naziv": "Pop"
+          }
+        ],
+        "SveRecenzije": [
+          {
+            "Id": 1,
+            "Opis": "Odlična pesma!",
+            "Ocena": 5,
+            "Recezent": null,
+            "RecenziraniElement": 0
+          },
+          {
+            "Id": 2,
+            "Opis": "Dobra melodija.",
+            "Ocena": 4,
+            "Recezent": null,
+            "RecenziraniElement": 0
+          }
+        ]
+      }
+    ],
+    "Ime": "Koncert 1",
+    "ProsecnaOcena": 5,
+    "Opis": "Veliki koncert je konza",
+    "Id": 4,
+    "SviZanrovi": [
+      {
+        "Id": 1,
+        "Naziv": "Rock"
+      },
+      {
+        "Id": 2,
+        "Naziv": "Pop"
+      }
+    ],
+    "SveRecenzije": [
+      {
+        "Id": 1,
+        "Opis": "Odlična pesma!",
+        "Ocena": 5,
+        "Recezent": null,
+        "RecenziraniElement": 0
+      },
+      {
+        "Id": 2,
+        "Opis": "Dobra melodija.",
+        "Ocena": 4,
+        "Recezent": null,
+        "RecenziraniElement": 0
+      }
+    ]
+  },
+  "1": {
+    "Snimatelj": "Snimatelj 1",
+    "FormatPrikaza": "HD",
+    "DatumDesavanja": "2024-06-05T00:32:10.846513+02:00",
+    "ElementiKoncerta": [
+      {
+        "Numere": [],
+        "Grupa": {
+          "Izvodjaci": [],
+          "Numere": [],
+          "Ime": "Grupa Test Izmenjena",
+          "ProsecnaOcena": 4,
+          "Opis": "Izmenjeni opis testne muzičke grupe",
+          "Id": 1,
+          "SviZanrovi": [
+            {
+              "Id": 1,
+              "Naziv": "Rock"
+            },
+            {
+              "Id": 2,
+              "Naziv": "Pop"
+            }
+          ],
+          "SveRecenzije": [
+            {
+              "Id": 1,
+              "Opis": "Odlična pesma!",
+              "Ocena": 5,
+              "Recezent": null,
+              "RecenziraniElement": 0
+            },
+            {
+              "Id": 2,
+              "Opis": "Dobra melodija.",
+              "Ocena": 4,
+              "Recezent": null,
+              "RecenziraniElement": 0
+            }
+          ]
+        },
+        "Ime": "Izvodjac 1",
+        "ProsecnaOcena": 5,
+        "Opis": "Poznati izvođač nad izvodjacima",
+        "Id": 2,
+        "SviZanrovi": [
+          {
+            "Id": 1,
+            "Naziv": "Rock"
+          },
+          {
+            "Id": 2,
+            "Naziv": "Pop"
+          }
+        ],
+        "SveRecenzije": [
+          {
+            "Id": 1,
+            "Opis": "Odlična pesma!",
+            "Ocena": 5,
+            "Recezent": null,
+            "RecenziraniElement": 0
+          },
+          {
+            "Id": 2,
+            "Opis": "Dobra melodija.",
+            "Ocena": 4,
+            "Recezent": null,
+            "RecenziraniElement": 0
+          }
+        ]
+      },
+      {
+        "DatumIzbacivanja": "2024-07-05T00:31:23.1100907+02:00",
+        "Izvodjaci": [
+          {
+            "Numere": [],
+            "Grupa": {
+              "Izvodjaci": [],
+              "Numere": [],
+              "Ime": "Grupa Test Izmenjena",
+              "ProsecnaOcena": 4,
+              "Opis": "Izmenjeni opis testne muzičke grupe",
+              "Id": 1,
+              "SviZanrovi": [
+                {
+                  "Id": 1,
+                  "Naziv": "Rock"
+                },
+                {
+                  "Id": 2,
+                  "Naziv": "Pop"
+                }
+              ],
+              "SveRecenzije": [
+                {
+                  "Id": 1,
+                  "Opis": "Odlična pesma!",
+                  "Ocena": 5,
+                  "Recezent": null,
+                  "RecenziraniElement": 0
+                },
+                {
+                  "Id": 2,
+                  "Opis": "Dobra melodija.",
+                  "Ocena": 4,
+                  "Recezent": null,
+                  "RecenziraniElement": 0
+                }
+              ]
+            },
+            "Ime": "Izvodjac 1",
+            "ProsecnaOcena": 5,
+            "Opis": "Poznati izvođač nad izvodjacima",
+            "Id": 2,
+            "SviZanrovi": [
+              {
+                "Id": 1,
+                "Naziv": "Rock"
+              },
+              {
+                "Id": 2,
+                "Naziv": "Pop"
+              }
+            ],
+            "SveRecenzije": [
+              {
+                "Id": 1,
+                "Opis": "Odlična pesma!",
+                "Ocena": 5,
+                "Recezent": null,
+                "RecenziraniElement": 0
+              },
+              {
+                "Id": 2,
+                "Opis": "Dobra melodija.",
+                "Ocena": 4,
+                "Recezent": null,
+                "RecenziraniElement": 0
+              }
+            ]
+          }
+        ],
+        "Ime": "Pesma 1",
+        "ProsecnaOcena": 5,
+        "Opis": "Prva pesma je konza",
+        "Id": 3,
+        "SviZanrovi": [
+          {
+            "Id": 1,
+            "Naziv": "Rock"
+          },
+          {
+            "Id": 2,
+            "Naziv": "Pop"
+          }
+        ],
+        "SveRecenzije": [
+          {
+            "Id": 1,
+            "Opis": "Odlična pesma!",
+            "Ocena": 5,
+            "Recezent": null,
+            "RecenziraniElement": 0
+          },
+          {
+            "Id": 2,
+            "Opis": "Dobra melodija.",
+            "Ocena": 4,
+            "Recezent": null,
+            "RecenziraniElement": 0
+          }
+        ]
+      }
+    ],
+    "Ime": "Koncert 1",
+    "ProsecnaOcena": 5,
+    "Opis": "Veliki koncert je konza",
+    "Id": 1,
+    "SviZanrovi": [
+      {
+        "Id": 1,
+        "Naziv": "Rock"
+      },
+      {
+        "Id": 2,
+        "Naziv": "Pop"
+      }
+    ],
+    "SveRecenzije": [
+      {
+        "Id": 1,
+        "Opis": "Odlična pesma!",
+        "Ocena": 5,
+        "Recezent": null,
+        "RecenziraniElement": 0
+      },
+      {
+        "Id": 2,
+        "Opis": "Dobra melodija.",
+        "Ocena": 4,
+        "Recezent": null,
+        "RecenziraniElement": 0
+      }
+    ]
+  },
+  "10": {
+    "Snimatelj": "Milos Milosavljevic",
+    "FormatPrikaza": "4k",
+    "DatumDesavanja": "2024-07-19T00:00:00",
+    "ElementiKoncerta": [
+      {
+        "Numere": [],
+        "Grupa": {
+          "Izvodjaci": [],
+          "Numere": [],
+          "Ime": "Grupa Test Izmenjena",
+          "ProsecnaOcena": 4,
+          "Opis": "Izmenjeni opis testne muzičke grupe",
+          "Id": 1,
+          "SviZanrovi": [
+            {
+              "Id": 1,
+              "Naziv": "Rock"
+            },
+            {
+              "Id": 2,
+              "Naziv": "Pop"
+            }
+          ],
+          "SveRecenzije": [
+            {
+              "Id": 1,
+              "Opis": "Odlična pesma!",
+              "Ocena": 5,
+              "Recezent": null,
+              "RecenziraniElement": 0
+            },
+            {
+              "Id": 2,
+              "Opis": "Dobra melodija.",
+              "Ocena": 4,
+              "Recezent": null,
+              "RecenziraniElement": 0
+            }
+          ]
+        },
+        "Ime": "Izvodjac 1",
+        "ProsecnaOcena": 5,
+        "Opis": "Poznati izvođač nad izvodjacima",
+        "Id": 2,
+        "SviZanrovi": [
+          {
+            "Id": 1,
+            "Naziv": "Rock"
+          },
+          {
+            "Id": 2,
+            "Naziv": "Pop"
+          }
+        ],
+        "SveRecenzije": [
+          {
+            "Id": 1,
+            "Opis": "Odlična pesma!",
+            "Ocena": 5,
+            "Recezent": null,
+            "RecenziraniElement": 0
+          },
+          {
+            "Id": 2,
+            "Opis": "Dobra melodija.",
+            "Ocena": 4,
+            "Recezent": null,
+            "RecenziraniElement": 0
+          }
+        ]
+      }
+    ],
+    "Ime": "Prvi koncert",
+    "ProsecnaOcena": 5,
+    "Opis": "Koncert",
+    "Id": 10,
+    "SviZanrovi": [
+      {
+        "Id": 2,
+        "Naziv": "Pop"
+      }
+    ],
+    "SveRecenzije": [
+      null
+    ]
+  }
+}

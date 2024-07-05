@@ -87,6 +87,10 @@ namespace MuzickiKatalog.View
             this.Close();
         }
 
-        
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {        
+            Dodavanje d = new Dodavanje();
+            d.Show();
+        }
     }
 }
