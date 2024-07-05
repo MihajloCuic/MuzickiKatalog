@@ -23,7 +23,8 @@ namespace MuzickiKatalog.View
         Osoba ulogovan;
         public Pocetna()
         {
-            ulogovan = null;
+            Dictionary<string, Korisnik> sviKorisnici = Korisnik.UcitajKorisnike();
+            ulogovan = sviKorisnici["petar@gmail.com"];
             InitializeComponent();
         }
         public Pocetna(Korisnik korisnik)
@@ -86,7 +87,7 @@ namespace MuzickiKatalog.View
             this.Close();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void Pretraga_Click(object sender, RoutedEventArgs e)
         {
             Pretraga pretraga = new Pretraga(ulogovan);
             pretraga.Show();

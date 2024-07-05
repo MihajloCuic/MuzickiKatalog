@@ -1,1 +1,12 @@
-{}
+{
+  "1": {
+    "ime": "Grupa 1",
+    "prosecnaOcena": 5,
+    "opis": "Popularna muzička grupa",
+    "id": 1,
+    "sviZanrovi": [],
+    "sveRecenzije": [],
+    "izvodjaci": [],
+    "numereAlbuma": []
+  }
+}

@@ -1,1 +1,14 @@
-{}
+{
+  "4": {
+    "ime": "Koncert 1",
+    "prosecnaOcena": 5,
+    "opis": "Veliki koncert",
+    "id": 4,
+    "sviZanrovi": [],
+    "sveRecenzije": [],
+    "snimatelj": "Snimatelj 1",
+    "formatPrikaza": "HD",
+    "datumDesavanja": "2024-07-04T10:15:30.123",
+    "numere": []
+  }
+}

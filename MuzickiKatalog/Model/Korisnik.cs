@@ -47,7 +47,9 @@ namespace MuzickiKatalog.Model
             try
             {
                 string data = File.ReadAllText(fajl);
-                sviKorisnici = JsonConvert.DeserializeObject<Dictionary<string, Korisnik>>(data);
+                JsonSerializerSettings settings = new JsonSerializerSettings();
+                settings.Converters.Add(new ElementSistemaConverter());
+                sviKorisnici = JsonConvert.DeserializeObject<Dictionary<string, Korisnik>>(data, settings);
             }
             catch (IOException ex) 
             {
@@ -60,7 +62,12 @@ namespace MuzickiKatalog.Model
         {
             try
             {
-                string data = JsonConvert.SerializeObject(sviKorisnici, Formatting.Indented);
+                JsonSerializerSettings settings = new JsonSerializerSettings
+                {
+                    Formatting = Formatting.Indented,
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                };
+                string data = JsonConvert.SerializeObject(sviKorisnici, settings);
                 File.WriteAllText(fajl, data);
             }
             catch (FileNotFoundException ex)

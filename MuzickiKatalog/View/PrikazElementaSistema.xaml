@@ -9,22 +9,24 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="exitDugme" Content="X" HorizontalAlignment="Left" Height="20" Margin="566,10,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold"/>
-        <Button x:Name="minimizeDugme" Content="_" HorizontalAlignment="Left" Height="20" Margin="541,10,0,0" VerticalAlignment="Top" Width="20"/>
+        <Button x:Name="exitDugme" Content="X" HorizontalAlignment="Left" Height="20" Margin="566,10,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold" Click="exitDugme_Click"/>
+        <Button x:Name="minimizeDugme" Content="_" HorizontalAlignment="Left" Height="20" Margin="541,10,0,0" VerticalAlignment="Top" Width="20" Click="minimizeDugme_Click"/>
         <Label x:Name="nazivLabela" Content="Naziv elementa" HorizontalAlignment="Center" Height="50" Margin="0,60,0,0" VerticalAlignment="Top" Width="300" FontSize="30"/>
         <Label x:Name="ocenaLabela" Content="Prosecna ocena: " HorizontalAlignment="Left" Height="30" Margin="51,160,0,0" VerticalAlignment="Top" Width="145" FontSize="15"/>
         <Label x:Name="labelaOpis" Content="Opis: " HorizontalAlignment="Left" Height="30" Margin="51,195,0,0" VerticalAlignment="Top" Width="60" FontSize="15"/>
         <Label x:Name="opisLabela" Content="" HorizontalAlignment="Left" Margin="150,195,0,0" VerticalAlignment="Top" Height="30" Width="401"/>
         <Label x:Name="recenzijeLabela" Content="Recenzije: " HorizontalAlignment="Left" Height="30" Margin="106,248,0,0" VerticalAlignment="Top" Width="73" FontSize="15"/>
-        <ListView x:Name="recenzijeLista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="51,278,344,94">
+        <ListView x:Name="recenzijeLista" Margin="51,278,346,94">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Recezent" Width="55" DisplayMemberBinding="{Binding Recezent}"/>
+                    <GridViewColumn Header="Recenzija" Width="103" DisplayMemberBinding="{Binding Opis}"/>
+                    <GridViewColumn Header="Ocena" Width="40" DisplayMemberBinding="{Binding Ocena}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label x:Name="bonusLabela" Visibility="Hidden" Content="Numere: " HorizontalAlignment="Left" Height="30" Margin="398,248,0,0" VerticalAlignment="Top" Width="73" FontSize="15"/>
-        <ListView x:Name="bonusLista" Visibility="Hidden" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="332,278,63,94">
+        <Label x:Name="bonusLabela" Visibility="Hidden" Content="" HorizontalAlignment="Left" Height="30" Margin="398,248,0,0" VerticalAlignment="Top" Width="73" FontSize="15"/>
+        <ListView x:Name="bonusLista" Visibility="Hidden" Margin="332,278,63,94">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -33,8 +35,8 @@
         </ListView>
         <Label x:Name="autorLabela" Content="" HorizontalAlignment="Left" Height="25" Margin="179,110,0,0" VerticalAlignment="Top" Width="150"/>
         <Label x:Name="zanroviLabela" Content="Zanr: " HorizontalAlignment="Left" Height="30" Margin="201,160,0,0" VerticalAlignment="Top" Width="350" FontSize="15"/>
-        <Button x:Name="recenzijaDugme" Content="DodajRecenziju" HorizontalAlignment="Left" Height="30" Margin="94,567,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="omiljenoDugme" Content="*" HorizontalAlignment="Left" Height="30" Margin="26,30,0,0" VerticalAlignment="Top" Width="30" FontWeight="Bold" FontSize="25" OpacityMask="#FF4C0505" BorderBrush="{x:Null}" Foreground="Black">
+        <Button x:Name="recenzijaDugme" Content="DodajRecenziju" HorizontalAlignment="Left" Height="30" Margin="94,567,0,0" VerticalAlignment="Top" Width="120" Click="recenzijaDugme_Click"/>
+        <Button x:Name="omiljenoDugme" Content="*" HorizontalAlignment="Left" Height="30" Margin="26,30,0,0" VerticalAlignment="Top" Width="30" FontWeight="Bold" FontSize="25" OpacityMask="#FF4C0505" BorderBrush="{x:Null}" Foreground="Black" Click="omiljenoDugme_Click">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>

@@ -1,1 +1,13 @@
-{}
+{
+  "5": {
+    "ime": "Album 1",
+    "prosecnaOcena": 5,
+    "opis": "Debi album",
+    "id": 5,
+    "sviZanrovi": [],
+    "sveRecenzije": [],
+    "datumIzdavanja": "2024-07-04T10:15:30.123",
+    "numereAlbuma": [],
+    "izvodjaci": []
+  }
+}

@@ -1,1 +1,27 @@
-{}
+{
+  "2": {
+    "Numere": [],
+    "Grupa": null,
+    "Ime": "Izvodjac 1",
+    "ProsecnaOcena": 5,
+    "Opis": "Poznati izvođač",
+    "Id": 2,
+    "SviZanrovi": [],
+    "SveRecenzije": [
+      {
+        "Id": 1,
+        "Opis": "dobro",
+        "Ocena": 3,
+        "Recezent": "mihajlo@gmail.com",
+        "RecenziraniElement": 2
+      },
+      {
+        "Id": -285408076,
+        "Opis": "vrlo dobar",
+        "Ocena": 4,
+        "Recezent": "petar@gmail.com",
+        "RecenziraniElement": 2
+      }
+    ]
+  }
+}
