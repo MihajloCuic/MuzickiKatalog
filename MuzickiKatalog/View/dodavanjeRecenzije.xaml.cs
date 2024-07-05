@@ -44,7 +44,8 @@ namespace MuzickiKatalog.View
             string opis = opisTextBlock.Text;
             try
             {
-                RecenzijaControler.DodajRecenziju(opis, ocena, recezent.Id, recenziraniElement.Id);
+                recenziraniElement = RecenzijaControler.DodajRecenziju(opis, ocena, recezent.Id, recenziraniElement.Id);
+
                 PrikazElementaSistema prikazRecenziranogElementa = new PrikazElementaSistema(recezent, recenziraniElement);
                 prikazRecenziranogElementa.Show();
                 this.Close();

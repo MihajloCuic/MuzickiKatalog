@@ -9,40 +9,41 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="exitDugme" Content="X" HorizontalAlignment="Left" Height="20" Margin="766,10,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold"/>
-        <Button x:Name="minimizeDugme" Content="_" HorizontalAlignment="Left" Height="20" Margin="741,10,0,0" VerticalAlignment="Top" Width="20"/>
+        <Button x:Name="exitDugme" Content="X" HorizontalAlignment="Left" Height="20" Margin="766,10,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold" Click="exitDugme_Click"/>
+        <Button x:Name="minimizeDugme" Content="_" HorizontalAlignment="Left" Height="20" Margin="741,10,0,0" VerticalAlignment="Top" Width="20" Click="minimizeDugme_Click"/>
         <Label x:Name="naslovLabela" Content="Pretraga" HorizontalAlignment="Center" Height="50" Margin="0,50,0,0" VerticalAlignment="Top" Width="120" FontSize="25" FontWeight="Bold" FontStyle="Italic"/>
         <Menu x:Name="menuNeregistrovani" Visibility="Visible" HorizontalAlignment="Center" Height="57" Margin="0,443,0,0" VerticalAlignment="Top" Width="800">
-            <MenuItem Header="                                                      Prikaz" Width="400" Height="57"/>
-            <MenuItem Header="                                                      Pretraga" Width="400" Height="57"/>
+            <MenuItem Header="                                                      Prikaz" Width="400" Height="57" Click="Pocetna_Click"/>
+            <MenuItem Header="                                                      Pretraga" Width="400" Height="57" Background="#FF929292"/>
         </Menu>
         <Menu x:Name="menuKorisnik" Visibility="Hidden" HorizontalAlignment="Center" Height="57" Margin="0,443,0,0" VerticalAlignment="Top" Width="800">
-            <MenuItem Header="                      Prikaz" Width="200" Height="57"/>
+            <MenuItem Header="                      Prikaz" Width="200" Height="57"  Click="Pocetna_Click"/>
             <MenuItem Header="                      Pretraga" Width="200" Height="57"/>
             <MenuItem Header="                      Glasanja" Width="200" Height="57"/>
             <MenuItem Header="                      Nalog" Width="200" Height="57"/>
         </Menu>
         <Menu x:Name="menuUrednik" Visibility="Hidden" HorizontalAlignment="Center" Height="57" Margin="0,443,0,0" VerticalAlignment="Top" Width="800">
-            <MenuItem Header="                  Prikaz" Width="160" Height="57"/>
+            <MenuItem Header="                  Prikaz" Width="160" Height="57"  Click="Pocetna_Click"/>
             <MenuItem Header="               Pretraga" Width="160" Height="57"/>
             <MenuItem Header="                  Dodaj" Width="160" Height="57"/>
             <MenuItem Header="               Glasanja" Width="160" Height="57"/>
             <MenuItem Header="               Recenzije" Width="160" Height="57"/>
         </Menu>
         <Menu x:Name="menuAdmin" Visibility="Hidden" HorizontalAlignment="Center" Height="57" Margin="0,443,0,0" VerticalAlignment="Top" Width="800">
-            <MenuItem Header="                      Prikaz" Width="200" Height="57"/>
+            <MenuItem Header="                      Prikaz" Width="200" Height="57"  Click="Pocetna_Click"/>
             <MenuItem Header="                      Pretraga" Width="200" Height="57"/>
             <MenuItem Header="                      Dodaj" Width="200" Height="57"/>
             <MenuItem Header="                      Urednici" Width="200" Height="57"/>
         </Menu>
-        <TextBox Height="40" Margin="68,105,149,0" TextWrapping="Wrap" Text="Type..." VerticalAlignment="Top" FontSize="25"/>
-        <ListView HorizontalAlignment="Center" Height="250" Margin="0,166,0,0" VerticalAlignment="Top" Width="660" d:ItemsSource="{d:SampleData ItemCount=5}">
+        <TextBox x:Name="pretragaUpis" Height="40" Margin="68,105,149,0" TextWrapping="Wrap" Text="Type..." VerticalAlignment="Top" FontSize="25"/>
+        <ListView x:Name="rezultatiPretrage" SelectionMode="Single" SelectionChanged="ListViewSelection_SelectionChanged" HorizontalAlignment="Center" Height="250" Margin="0,166,0,0" VerticalAlignment="Top" Width="660">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Id" Width="100" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="Naziv" Width="560" DisplayMemberBinding="{Binding Naziv}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Trazi" HorizontalAlignment="Left" Height="40" Margin="664,105,0,0" VerticalAlignment="Top" Width="64"/>
+        <Button x:Name="pretragaDugme" Content="Trazi" HorizontalAlignment="Left" Height="40" Margin="664,105,0,0" VerticalAlignment="Top" Width="64" Click="pretragaDugme_Click"/>
     </Grid>
 </Window>

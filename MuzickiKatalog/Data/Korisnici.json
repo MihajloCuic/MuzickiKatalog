@@ -1,0 +1,90 @@
+{
+  "mihajlo@gmail.com": {
+    "SvePlayliste": [],
+    "Omiljeno": [
+      {
+        "Numere": [],
+        "Grupa": null,
+        "Ime": "Izvodjac 1",
+        "ProsecnaOcena": 5,
+        "Opis": "Poznati izvođač",
+        "Id": 2,
+        "SviZanrovi": [],
+        "SveRecenzije": [
+          {
+            "Id": 1,
+            "Opis": "dobro",
+            "Ocena": 3,
+            "Recezent": "mihajlo@gmail.com",
+            "RecenziraniElement": 2
+          }
+        ]
+      },
+      {
+        "DatumIzbacivanja": "0001-01-01T00:00:00",
+        "Izvodjaci": [
+          {
+            "Numere": [],
+            "Grupa": null,
+            "Ime": "Izvodjac 1",
+            "ProsecnaOcena": 5,
+            "Opis": "Poznati izvođač",
+            "Id": 2,
+            "SviZanrovi": [],
+            "SveRecenzije": []
+          }
+        ],
+        "Ime": "Pesma 1",
+        "ProsecnaOcena": 5,
+        "Opis": "Prva pesma",
+        "Id": 3,
+        "SviZanrovi": [],
+        "SveRecenzije": []
+      }
+    ],
+    "Blokiran": false,
+    "Ime": "mihajlo",
+    "Prezime": "cuic",
+    "Email": "mihajlo@gmail.com",
+    "Telefon": "00612753009",
+    "Id": "mihajlo@gmail.com",
+    "SveRecenzije": []
+  },
+  "petar@gmail.com": {
+    "SvePlayliste": [],
+    "Omiljeno": [
+      {
+        "Numere": [],
+        "Grupa": null,
+        "Ime": "Izvodjac 1",
+        "ProsecnaOcena": 5,
+        "Opis": "Poznati izvođač",
+        "Id": 2,
+        "SviZanrovi": [],
+        "SveRecenzije": [
+          {
+            "Id": 1,
+            "Opis": "dobro",
+            "Ocena": 3,
+            "Recezent": "mihajlo@gmail.com",
+            "RecenziraniElement": 2
+          },
+          {
+            "Id": -285408076,
+            "Opis": "vrlo dobar",
+            "Ocena": 4,
+            "Recezent": "petar@gmail.com",
+            "RecenziraniElement": 2
+          }
+        ]
+      }
+    ],
+    "Blokiran": false,
+    "Ime": "petar",
+    "Prezime": "peric",
+    "Email": "petar@gmail.com",
+    "Telefon": "438027594325",
+    "Id": "petar@gmail.com",
+    "SveRecenzije": []
+  }
+}

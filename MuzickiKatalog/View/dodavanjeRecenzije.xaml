@@ -21,8 +21,8 @@
             <ComboBoxItem>5</ComboBoxItem>
         </ComboBox>
         <Label x:Name="opisLabela" Content="Opis: " HorizontalAlignment="Left" Height="34" Margin="56,197,0,0" VerticalAlignment="Top" Width="80" FontSize="18"/>
-        <TextBlock x:Name="opisTextBlock" HorizontalAlignment="Left" Height="135" Margin="153,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Background="#FFE4E4E4" OpacityMask="#FF333333"/>
         <Button x:Name="dodajRecenzijuDugme" Content="DodajRecenziju" HorizontalAlignment="Center" Height="45" Margin="0,369,0,0" VerticalAlignment="Top" Width="230" Click="dodajRecenzijuDugme_Click"/>
+        <TextBox x:Name="opisTextBlock" HorizontalAlignment="Left" Height="145" Margin="128,197,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="265"/>
 
     </Grid>
 </Window>

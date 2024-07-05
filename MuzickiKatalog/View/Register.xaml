@@ -9,8 +9,8 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button Content="X" HorizontalAlignment="Left" Height="20" Margin="316,10,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold"/>
-        <Button Content="_" HorizontalAlignment="Left" Height="20" Margin="292,10,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.533,0.567"/>
+        <Button Content="X" HorizontalAlignment="Left" Height="20" Margin="316,10,0,0" VerticalAlignment="Top" Width="20" FontWeight="Bold" Click="Button_Click_1"/>
+        <Button Content="_" HorizontalAlignment="Left" Height="20" Margin="292,10,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.533,0.567" Click="Button_Click_2"/>
         <Label Content="Register" HorizontalAlignment="Center" Height="45" Margin="0,37,0,0" VerticalAlignment="Top" Width="110" FontSize="25" FontWeight="Bold" FontStyle="Italic"/>
         <Label x:Name="imeLabela" Content="Ime" HorizontalAlignment="Left" Height="26" Margin="41,117,0,0" VerticalAlignment="Top" Width="87"/>
         <Label x:Name="prezimeLabela" Content="Prezime" HorizontalAlignment="Left" Height="26" Margin="41,148,0,0" VerticalAlignment="Top" Width="87"/>
@@ -22,6 +22,6 @@
         <TextBox x:Name="emailUnos" HorizontalAlignment="Left" Margin="175,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
         <TextBox x:Name="telefonUnos" HorizontalAlignment="Left" Margin="175,210,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
         <TextBox x:Name="lozinkaUnos" HorizontalAlignment="Left" Margin="175,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Button Content="Register" HorizontalAlignment="Center" Height="30" Margin="0,311,0,0" VerticalAlignment="Top" Width="135" FontWeight="Bold"/>
+        <Button Content="Register" HorizontalAlignment="Center" Height="30" Margin="0,311,0,0" VerticalAlignment="Top" Width="135" FontWeight="Bold" Click="Button_Click"/>
     </Grid>
 </Window>

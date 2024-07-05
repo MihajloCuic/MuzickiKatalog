@@ -1,1 +1,30 @@
-﻿
+{
+  "1": {
+    "Id": 1,
+    "Opis": "dobro",
+    "Ocena": 3,
+    "Recezent": "mihajlo@gmail.com",
+    "RecenziraniElement": 2
+  },
+  "1396114565": {
+    "Id": 1396114565,
+    "Opis": "Odlicno",
+    "Ocena": 5,
+    "Recezent": "petar@gmail.com",
+    "RecenziraniElement": 3
+  },
+  "728460165": {
+    "Id": 728460165,
+    "Opis": "top",
+    "Ocena": 5,
+    "Recezent": "mihajlo@gmail.com",
+    "RecenziraniElement": 3
+  },
+  "-285408076": {
+    "Id": -285408076,
+    "Opis": "vrlo dobar",
+    "Ocena": 4,
+    "Recezent": "petar@gmail.com",
+    "RecenziraniElement": 2
+  }
+}

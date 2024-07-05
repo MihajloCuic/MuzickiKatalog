@@ -92,5 +92,11 @@ namespace MuzickiKatalog.View
             Dodavanje d = new Dodavanje();
             d.Show();
         }
+        private void Pretraga_Click(object sender, RoutedEventArgs e)
+        {
+            Pretraga pretraga = new Pretraga(ulogovan);
+            pretraga.Show();
+            this.Close();
+        }
     }
 }
